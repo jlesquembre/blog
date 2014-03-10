@@ -1,0 +1,36 @@
+## -*- coding: utf-8 -*-
+<%namespace name="helper" file="index_helper.tmpl"/>
+<%namespace name="comments" file="comments_helper.tmpl"/>
+<%inherit file="base.tmpl"/>
+
+<%block name="content">
+
+<div class="posts">
+
+    <% years = [] %>
+    % for post in posts:
+    <!-- A single blog post -->
+    % if post.date.year not in years:
+        ##<h4 class="content-subhead">${post.date.year}</h4>
+        <h2>${post.date.year}</h2>
+        <% years.append(post.date.year) %>
+    % endif
+    <section class="post">
+        <%include file='include/post_head.tmpl' args='post=post'/>
+        <h1 class="content-subhead"></h1>
+    </section>
+    % endfor
+
+
+
+     ##% for key in context.keys():
+     ##   <p>${key}  ---    ${context[key]}</p>
+     ##% endfor
+
+</div>
+
+
+    ##${helper.html_pager()}
+    ##${comments.comment_link_script()}
+    ##${helper.mathjax_script(posts)}
+</%block>

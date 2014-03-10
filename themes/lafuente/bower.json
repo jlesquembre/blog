@@ -1,0 +1,19 @@
+{
+  "name": "lafuente",
+  "version": "0.0.0",
+  "authors": [
+    "Jose Luis Lafuente <jlesquembre@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "csshake": "elrumordelaluz/csshake"
+  }
+}

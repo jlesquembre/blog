@@ -1,0 +1,26 @@
+## -*- coding: utf-8 -*-
+<%namespace name="helper" file="index_helper.tmpl"/>
+<%namespace name="comments" file="comments_helper.tmpl"/>
+<%inherit file="base.tmpl"/>
+
+<%block name="content">
+
+<!-- A wrapper for all the blog posts -->
+<div class="posts">
+    <h1 class="content-subhead">Posts tagged ${tag}</h1>
+
+    % for post in posts:
+    <!-- A single blog post -->
+    <section class="post">
+        <%include file='include/post_head.tmpl' args='post=post'/>
+        <h1 class="content-subhead"></h1>
+    </section>
+    % endfor
+
+</div>
+
+
+    ${helper.html_pager()}
+    ${comments.comment_link_script()}
+    ${helper.mathjax_script(posts)}
+</%block>

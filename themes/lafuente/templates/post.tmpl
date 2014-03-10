@@ -1,0 +1,16 @@
+## -*- coding: utf-8 -*-
+<%namespace name="helper" file="index_helper.tmpl"/>
+<%namespace name="comments" file="comments_helper.tmpl"/>
+<%inherit file="base.tmpl"/>
+<%block name="content">
+
+    <!-- A single blog post -->
+    <section class="post">
+        <%include file='include/post_head.tmpl' args='post=post'/>
+        <div class="post-description">
+            <p>${post.text()}</p>
+        </div>
+    </section>
+
+
+</%block>

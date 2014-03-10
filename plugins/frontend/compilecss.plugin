@@ -1,0 +1,8 @@
+[Core]
+Name = compilecss
+Module = compilecss
+Tests = test_compilecss
+
+[Nikola]
+MinVersion = 6.0.0
+MaxVersion = 7.0.0
