@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//oss.maxcdn.com/pure/0.4.2/pure-min.css">
+
+    
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <title>Home (old posts, page 1) | Lafuente</title>
+
+    
+    
+    
+
+</head>
+
+<body id="index" class="home">
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-med-1-4">
+
+        <div class="header header-jl">
+            <hgroup>
+                <h1 class="brand-title">Lafuente</h1>
+            </hgroup>
+
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="archive.html">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            
+
+
+        </div>
+
+        <div class="social-body">
+            <p class="social">
+                <a href="tags" class="">
+                    <i class="fa fa-tags fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://github.com/jlesquembre/" class="">
+                    <i class="fa fa-github fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://twitter.com/jlesquembre">
+                    <i class="fa fa-twitter-square fa-3x shake shake-little"></i>
+                </a>
+                <a href="rss.xml">
+                    <i class="fa fa-rss fa-3x shake shake-little"></i>
+                </a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="content pure-u-1 pure-u-med-3-4">
+
+        <div>
+            
+
+<!-- A wrapper for all the blog posts -->
+<div class="posts">
+    <h1 class="content-subhead">Latests posts</h1>
+
+    <!-- A single blog post -->
+    <section class="post">
+        
+
+
+<header class="post-header">
+
+
+    <h2 class="post-title">
+        <a href="posts/give-sudo-access-to-any-user.html" rel="bookmark">Give sudo access to any user</a>
+    </h2>
+
+    <p class="post-meta">
+       2011-01-18 ·
+       <a class="post-category" href="tags/sudo.html">sudo</a>
+       <a class="post-category" href="tags/linux.html">linux</a>
+    </p>
+</header>
+
+
+        <div class="post-description">
+            <p> </p><div><p>Normally, after install the OS (Debian in my case), you don't have sudo access,
+and you can see this error:</p>
+<pre class="code text literal-block">
+user is not in the sudoers file. This incident will be reported.
+</pre>
+<p class="more"><a href="posts/give-sudo-access-to-any-user.html"> </a></p></div> 
+        </div>
+        <p><a class="post-author" href="posts/give-sudo-access-to-any-user.html">Read more...</a></p>
+        <h1 class="content-subhead"></h1>
+    </section>
+    <!-- A single blog post -->
+    <section class="post">
+        
+
+
+<header class="post-header">
+
+
+    <h2 class="post-title">
+        <a href="posts/remote-host-authentication-changed.html" rel="bookmark">OpenSSH, remote host identification has changed</a>
+    </h2>
+
+    <p class="post-meta">
+       2011-01-18 ·
+       <a class="post-category" href="tags/openssh.html">openssh</a>
+       <a class="post-category" href="tags/linux.html">linux</a>
+    </p>
+</header>
+
+
+        <div class="post-description">
+            <p> </p><div><p>Sometimes when I run the ssh command I get this error:</p>
+<pre class="code text literal-block">
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that the RSA host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
+Please contact your system administrator.
+Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
+Offending key in /home/user/.ssh/known_hosts:7
+RSA host key for 192.168.1.5 has changed and you have requested strict checking.
+Host key verification failed.
+</pre>
+<p class="more"><a href="posts/remote-host-authentication-changed.html"> </a></p></div> 
+        </div>
+        <p><a class="post-author" href="posts/remote-host-authentication-changed.html">Read more...</a></p>
+        <h1 class="content-subhead"></h1>
+    </section>
+
+</div>
+
+
+    
+
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-sm-1-2">
+            <p>
+                <a href="index.html" rel="prev" class="pure-button pure-button-active"><i class="fa fa-arrow-left"></i>  Newer posts</a>
+            </p>
+
+        </div>
+
+        <div class="pure-u-1 pure-u-sm-1-2">
+        </div>
+    </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+
+
+</body>
+</html>

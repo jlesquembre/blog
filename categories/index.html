@@ -1,0 +1,121 @@
+<!DOCTYPE html><html if comment_system="=" xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="assets/css/main-grid-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="../assets/css/main-grid.css">
+    <!--<![endif]-->
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="assets/css/layouts/blog-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="../assets/css/layouts/blog.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="../assets/css/code.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    
+    
+    
+
+</head>
+
+<body id="index" class="home">
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-med-1-4">
+
+        <div class="header header-jl">
+            <hgroup>
+                <h1 class="brand-title">Lafuente</h1>
+            </hgroup>
+
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://purecss.io">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://yuilibrary.com">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="../"><i class="fa fa-angle-double-left"></i> Home</a>
+                    </li>
+                </ul>
+            </nav>
+
+            
+
+
+        </div>
+
+        <div class="social-body">
+            <p class="social">
+                <a href="https://github.com/jlesquembre/">
+                    <i class="fa fa-github fa-3x"></i>
+                </a>
+                <a href="https://twitter.com/jlesquembre">
+                    <i class="fa fa-twitter-square fa-3x"></i>
+                </a>
+                <a href="http://testpy.org/feeds/all.atom.xml">
+                    <i class="fa fa-rss fa-3x"></i>
+                </a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="content pure-u-1 pure-u-med-3-4">
+
+        <div>
+            
+    <h1>Tags</h1>
+        <ul class="unstyled bricks">
+            <li><a class="reference" href="blog.html">blog</a></li>
+            <li><a class="reference" href="demo.html">demo</a></li>
+            <li><a class="reference" href="linux.html">linux</a></li>
+            <li><a class="reference" href="nikola.html">nikola</a></li>
+            <li><a class="reference" href="openssh.html">openssh</a></li>
+            <li><a class="reference" href="python.html">python</a></li>
+        </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+
+
+</body>
+</html>

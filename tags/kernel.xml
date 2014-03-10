@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lafuente (kernel)</title><link>http://lafuente.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://lafuente.io/tags/kernel.xml"></atom:link><language>en</language><lastBuildDate>Mon, 10 Mar 2014 20:30:46 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Load a kernel module</title><link>http://lafuente.io/posts/load-a-kernel-module.html</link><description>&lt;div&gt;&lt;p&gt;In Linux, to load a kernel module (for example, fuse) run:&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+modprobe fuse
+&lt;/pre&gt;
+&lt;p&gt;You can verify that the module is loaded using the following command:&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/load-a-kernel-module.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kernel</category><category>linux</category><guid>http://lafuente.io/posts/load-a-kernel-module.html</guid><pubDate>Sat, 22 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>

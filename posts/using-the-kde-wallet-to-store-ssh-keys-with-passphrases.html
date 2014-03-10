@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//oss.maxcdn.com/pure/0.4.2/pure-min.css">
+
+    
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+
+    <title>Using the KDE Wallet to store ssh keys with passphrases | Lafuente</title>
+
+    
+    
+    
+
+</head>
+
+<body id="index" class="home">
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-med-1-4">
+
+        <div class="header header-jl">
+            <hgroup>
+                <h1 class="brand-title">Lafuente</h1>
+            </hgroup>
+
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="../archive.html">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="../"><i class="fa fa-angle-double-left"></i> Home</a>
+                    </li>
+                </ul>
+            </nav>
+
+            
+
+
+        </div>
+
+        <div class="social-body">
+            <p class="social">
+                <a href="../tags" class="">
+                    <i class="fa fa-tags fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://github.com/jlesquembre/" class="">
+                    <i class="fa fa-github fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://twitter.com/jlesquembre">
+                    <i class="fa fa-twitter-square fa-3x shake shake-little"></i>
+                </a>
+                <a href="../rss.xml">
+                    <i class="fa fa-rss fa-3x shake shake-little"></i>
+                </a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="content pure-u-1 pure-u-med-3-4">
+
+        <div>
+            
+
+    <!-- A single blog post -->
+    <section class="post">
+        
+
+
+<header class="post-header">
+
+
+    <h2 class="post-title">
+        <a href="#" rel="bookmark">Using the KDE Wallet to store ssh keys with passphrases</a>
+    </h2>
+
+    <p class="post-meta">
+       2012-03-09 ·
+       <a class="post-category" href="../tags/openssh.html">openssh</a>
+       <a class="post-category" href="../tags/linux.html">linux</a>
+       <a class="post-category" href="../tags/kde.html">kde</a>
+    </p>
+</header>
+
+        <div class="post-description">
+            <p></p><div><p>I have read an article about SSH passphrases
+(<a class="reference external" href="http://help.github.com/ssh-key-passphrases/">github:help</a>), but they only
+explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.</p>
+<p>This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
+SSH keys with passphrases, but we don't need to enter a passphrase every time
+we use the key, KDE Wallet does the job. I assume you are using KDE.</p>
+<!-- TEASER_END: -->
+<p>In 3 easy steps:</p>
+<div class="section" id="install-ksshaskpass">
+<h2>1. Install ksshaskpass</h2>
+<p>Use your favorite package manager.</p>
+</div>
+<div class="section" id="create-script-file">
+<h2>2. Create script file</h2>
+<p>Create the file</p>
+<pre class="code bash literal-block">
+~/.kde/Autostart/ssh-add.sh
+</pre>
+<p>On some distributions <cite>~/.kde4/Autostart/ssh-add.sh</cite></p>
+<p>And add this content</p>
+<pre class="code bash literal-block">
+<span class="c">#!/bin/sh
+</span><span class="nb">export </span><span class="nv">SSH_ASKPASS</span><span class="o">=</span>/usr/bin/ksshaskpass
+ssh-add &lt; /dev/null
+</pre>
+</div>
+<div class="section" id="make-it-executable">
+<h2>3. Make it executable</h2>
+<pre class="code bash literal-block">
+chmod +x ~/.kde/Autostart/ssh-add.sh
+</pre>
+<p>And run the script (or restart the session)</p>
+</div>
+<div class="section" id="extra">
+<h2>Extra</h2>
+<p>For security reasons, is a good idea stop ssh-agent when you finish your
+session, create the file</p>
+<pre class="code bash literal-block">
+~/.kde/shutdown/ssh-agent.sh
+</pre>
+<p>With this content</p>
+<pre class="code bash literal-block">
+<span class="c">#!/bin/sh
+</span>ssh-agent -k
+</pre>
+<p>This file should be executable</p>
+<p>A good page for more info about SSH: <a class="reference external" href="https://wiki.archlinux.org/index.php/Secure_Shell">Secure Shell (Arch Linux)</a></p>
+</div></div>
+        </div>
+    </section>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+
+
+</body>
+</html>

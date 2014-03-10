@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//oss.maxcdn.com/pure/0.4.2/pure-min.css">
+
+    
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+
+    <title>Autofs configuration | Lafuente</title>
+
+    
+    
+    
+
+</head>
+
+<body id="index" class="home">
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-med-1-4">
+
+        <div class="header header-jl">
+            <hgroup>
+                <h1 class="brand-title">Lafuente</h1>
+            </hgroup>
+
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="../archive.html">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="../"><i class="fa fa-angle-double-left"></i> Home</a>
+                    </li>
+                </ul>
+            </nav>
+
+            
+
+
+        </div>
+
+        <div class="social-body">
+            <p class="social">
+                <a href="../tags" class="">
+                    <i class="fa fa-tags fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://github.com/jlesquembre/" class="">
+                    <i class="fa fa-github fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://twitter.com/jlesquembre">
+                    <i class="fa fa-twitter-square fa-3x shake shake-little"></i>
+                </a>
+                <a href="../rss.xml">
+                    <i class="fa fa-rss fa-3x shake shake-little"></i>
+                </a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="content pure-u-1 pure-u-med-3-4">
+
+        <div>
+            
+
+    <!-- A single blog post -->
+    <section class="post">
+        
+
+
+<header class="post-header">
+
+
+    <h2 class="post-title">
+        <a href="#" rel="bookmark">Autofs configuration</a>
+    </h2>
+
+    <p class="post-meta">
+       2011-03-11 ·
+       <a class="post-category" href="../tags/linux.html">linux</a>
+       <a class="post-category" href="../tags/autofs.html">autofs</a>
+    </p>
+</header>
+
+        <div class="post-description">
+            <p></p><div><p>Autofs uses <cite>/etc/auto.master</cite> as its default primary configuration file. We
+can define two kind of maps in this file, direct and indirect. An example:</p>
+<pre class="code text literal-block">
+# mount point   config file        options
+
+/-              /etc/auto.direct   --ghost
+
+/misc           /etc/auto.misc     --timeout=30 --ghost
+
++auto.master
+</pre>
+<!-- TEASER_END: -->
+<p>First map is a direct map, second is indirect. Entries in a direct map contain
+an absolute path, instead of the relative path names used in indirect maps. The
+<cite>--ghost</cite> option tells the automounter to create empty directories of all the
+mount points. The <cite>/misc</cite> folder should be empty.
+Let's see the other configuration files, in this example we are going to mount
+remote file systems using cifs.</p>
+<p><cite>/etc/auto.direct</cite></p>
+<pre class="code text literal-block">
+# directory          mount options                      device to mount
+/home/ian/music      -fstype=cifs,ro,soft,user=guest    ://192.168.1.10/music
+/home/deb/music      -fstype=cifs,ro,soft,user=guest    ://192.168.1.10/music
+</pre>
+<p>Folders <cite>/home/ian/music</cite> and <cite>/home/deb/music</cite> should be empty or not exist. In
+both we can access to te remote folder /music in computer 192.168.1.10</p>
+<p><cite>/etc/auto.misc</cite></p>
+<pre class="code text literal-block">
+# directory  mount options                        device to mount
+ian          -fstype=cifs,ro,soft,user=ian        ://192.168.1.10/export/home/ian
+deb          -fstype=cifs,ro,soft,user=deb        ://192.168.1.10/export/home/deb
+</pre>
+<p>Folders <cite>/misc/ian</cite> and <cite>/misc/deb</cite> will be created.</p></div>
+        </div>
+    </section>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+
+
+</body>
+</html>

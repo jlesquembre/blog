@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lafuente (linux)</title><link>http://lafuente.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://lafuente.io/tags/linux.xml"></atom:link><language>en</language><lastBuildDate>Mon, 10 Mar 2014 20:30:46 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using the KDE Wallet to store ssh keys with passphrases</title><link>http://lafuente.io/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</link><description>&lt;div&gt;&lt;p&gt;I have read an article about SSH passphrases
+(&lt;a class="reference external" href="http://help.github.com/ssh-key-passphrases/"&gt;github:help&lt;/a&gt;), but they only
+explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.&lt;/p&gt;
+&lt;p&gt;This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
+SSH keys with passphrases, but we don't need to enter a passphrase every time
+we use the key, KDE Wallet does the job. I assume you are using KDE.&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><category>kde</category><guid>http://lafuente.io/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</guid><pubDate>Fri, 09 Mar 2012 11:49:46 GMT</pubDate></item><item><title>Autofs configuration</title><link>http://lafuente.io/posts/autofs-configuration.html</link><description>&lt;div&gt;&lt;p&gt;Autofs uses &lt;cite&gt;/etc/auto.master&lt;/cite&gt; as its default primary configuration file. We
+can define two kind of maps in this file, direct and indirect. An example:&lt;/p&gt;
+&lt;pre class="code text literal-block"&gt;
+# mount point   config file        options
+
+/-              /etc/auto.direct   --ghost
+
+/misc           /etc/auto.misc     --timeout=30 --ghost
+
++auto.master
+&lt;/pre&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/autofs-configuration.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>autofs</category><guid>http://lafuente.io/posts/autofs-configuration.html</guid><pubDate>Fri, 11 Mar 2011 00:00:00 GMT</pubDate></item><item><title>Using public keys with openSSH</title><link>http://lafuente.io/posts/using-public-keys-with-openssh.html</link><description>&lt;div&gt;&lt;img alt="/images/sshconnection.png" src="http://lafuente.io/images/sshconnection.png"&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/using-public-keys-with-openssh.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>openssh</category><guid>http://lafuente.io/posts/using-public-keys-with-openssh.html</guid><pubDate>Thu, 27 Jan 2011 00:00:00 GMT</pubDate></item><item><title>File and directory permissions</title><link>http://lafuente.io/posts/file-and-directory-permissions.html</link><description>&lt;div&gt;&lt;p&gt;The best way to understand the Linux permissions, is with an example. If we run
+the command &lt;cite&gt;ls -l&lt;/cite&gt; we get an output like this:&lt;/p&gt;
+&lt;pre class="code text literal-block"&gt;
+1 2          3     4     5      6     7             8
+- rw-r-----  1     user  users     8  ene 24 11:01  f.txt
+d rwxr-xr-x  2     root  root   4096  ene 24 12:14  dir
+&lt;/pre&gt;
+&lt;p&gt;which maps to&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/file-and-directory-permissions.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><guid>http://lafuente.io/posts/file-and-directory-permissions.html</guid><pubDate>Mon, 24 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Load a kernel module</title><link>http://lafuente.io/posts/load-a-kernel-module.html</link><description>&lt;div&gt;&lt;p&gt;In Linux, to load a kernel module (for example, fuse) run:&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+modprobe fuse
+&lt;/pre&gt;
+&lt;p&gt;You can verify that the module is loaded using the following command:&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/load-a-kernel-module.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kernel</category><category>linux</category><guid>http://lafuente.io/posts/load-a-kernel-module.html</guid><pubDate>Sat, 22 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Give sudo access to any user</title><link>http://lafuente.io/posts/give-sudo-access-to-any-user.html</link><description>&lt;div&gt;&lt;p&gt;Normally, after install the OS (Debian in my case), you don't have sudo access,
+and you can see this error:&lt;/p&gt;
+&lt;pre class="code text literal-block"&gt;
+user is not in the sudoers file. This incident will be reported.
+&lt;/pre&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/give-sudo-access-to-any-user.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>sudo</category><category>linux</category><guid>http://lafuente.io/posts/give-sudo-access-to-any-user.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item><item><title>OpenSSH, remote host identification has changed</title><link>http://lafuente.io/posts/remote-host-authentication-changed.html</link><description>&lt;div&gt;&lt;p&gt;Sometimes when I run the ssh command I get this error:&lt;/p&gt;
+&lt;pre class="code text literal-block"&gt;
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that the RSA host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
+Please contact your system administrator.
+Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
+Offending key in /home/user/.ssh/known_hosts:7
+RSA host key for 192.168.1.5 has changed and you have requested strict checking.
+Host key verification failed.
+&lt;/pre&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/remote-host-authentication-changed.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><guid>http://lafuente.io/posts/remote-host-authentication-changed.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>

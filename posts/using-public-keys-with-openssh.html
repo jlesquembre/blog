@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//oss.maxcdn.com/pure/0.4.2/pure-min.css">
+
+    
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+
+    <title>Using public keys with openSSH | Lafuente</title>
+
+    
+    
+    
+
+</head>
+
+<body id="index" class="home">
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-med-1-4">
+
+        <div class="header header-jl">
+            <hgroup>
+                <h1 class="brand-title">Lafuente</h1>
+            </hgroup>
+
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="../archive.html">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="../"><i class="fa fa-angle-double-left"></i> Home</a>
+                    </li>
+                </ul>
+            </nav>
+
+            
+
+
+        </div>
+
+        <div class="social-body">
+            <p class="social">
+                <a href="../tags" class="">
+                    <i class="fa fa-tags fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://github.com/jlesquembre/" class="">
+                    <i class="fa fa-github fa-3x shake shake-little"></i>
+                </a>
+                <a href="https://twitter.com/jlesquembre">
+                    <i class="fa fa-twitter-square fa-3x shake shake-little"></i>
+                </a>
+                <a href="../rss.xml">
+                    <i class="fa fa-rss fa-3x shake shake-little"></i>
+                </a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="content pure-u-1 pure-u-med-3-4">
+
+        <div>
+            
+
+    <!-- A single blog post -->
+    <section class="post">
+        
+
+
+<header class="post-header">
+
+
+    <h2 class="post-title">
+        <a href="#" rel="bookmark">Using public keys with openSSH</a>
+    </h2>
+
+    <p class="post-meta">
+       2011-01-27 ·
+       <a class="post-category" href="../tags/linux.html">linux</a>
+       <a class="post-category" href="../tags/openssh.html">openssh</a>
+    </p>
+</header>
+
+        <div class="post-description">
+            <p></p><div><img alt="/images/sshconnection.png" src="../images/sshconnection.png">
+<!-- TEASER_END: -->
+<div class="section" id="generate-the-key">
+<h2>Generate the key</h2>
+<p>We need to create a public key, we do it in computer A:</p>
+<pre class="code bash literal-block">
+ssh-keygen -t rsa -b 2048 -f /home/user_name/.ssh/key-name
+</pre>
+<p>Press always intro when asked to generate a key without passphrase. This is
+less secure, but it can be really useful.  Now we have in our .ssh folder the
+keys (key-name and key-name.pub)</p>
+</div>
+<div class="section" id="copy-public-key">
+<h2>Copy public key</h2>
+<p>Copy the public key to the remote host you wish to access (in our example from computer A to B) and add it to the file</p>
+<pre class="code bash literal-block">
+~/.ssh/authorized_keys
+</pre>
+<p>If that file does not exist then you should create it.
+Or you can use ssh-copy-id to log into a remote machine and append the indicated identity file to that machine's ~/.ssh/authorized_keys file.</p>
+<pre class="code bash literal-block">
+ssh-copy-id <span class="o">[</span>-i <span class="o">[</span>identity_file<span class="o">]]</span> <span class="o">[</span>user@<span class="o">]</span>machine
+</pre>
+</div>
+<div class="section" id="test-it">
+<h2>Test it</h2>
+<p>In computer A run this command:</p>
+<pre class="code bash literal-block">
+ssh -i key user@computerB_IP
+</pre>
+<p>If every thing is fine, you should be able to connect to computer B with this
+command.</p>
+</div>
+<div class="section" id="laziness-is-a-virtue-using-ssh-config">
+<h2>Laziness is a virtue, using ssh config</h2>
+<p>You can create alias for your ssh connections, this way, you don't need to
+remember usernames, IPs, etc...</p>
+<p>First, create this file:</p>
+<pre class="code bash literal-block">
+~/.ssh/config
+</pre>
+<p>with this content:</p>
+<pre class="code bash literal-block">
+Host <span class="nb">alias
+</span>HostName computerB_IP
+User username
+IdentityFile ~/.ssh/path/to/key
+</pre>
+<p>Now it is possible connent with this command:</p>
+<pre class="code bash literal-block">
+ssh <span class="nb">alias</span>
+</pre>
+<p>Great, isn't it? For a complete connect list for the ssh config file, type</p>
+<pre class="code bash literal-block">
+man ssh_config
+</pre>
+</div></div>
+        </div>
+    </section>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('body').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+
+
+</body>
+</html>
