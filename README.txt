@@ -18,3 +18,4 @@ And point your browser to http://localhost:8000
 To check all available commands::
 
     nikola help
+
