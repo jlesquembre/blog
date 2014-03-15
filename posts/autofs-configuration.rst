@@ -10,11 +10,8 @@ can define two kind of maps in this file, direct and indirect. An example:
 .. code-block:: text
 
     # mount point   config file        options
-
     /-              /etc/auto.direct   --ghost
-
     /misc           /etc/auto.misc     --timeout=30 --ghost
-
     +auto.master
 
 .. TEASER_END:
