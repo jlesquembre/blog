@@ -44,9 +44,11 @@ class Plugin(Task):
                     run('compass compile', cwd=compass_root)
 
                     LOGGER.notice("AUTOPREFIXER")
+                    LOGGER.notice("CWD: {}".format(theme_root))
                     run('autoprefixer -o _tmp/all.pre.css _tmp/all.css', cwd=theme_root)
 
                     LOGGER.notice("CSSO (CSS optimizer)")
+                    LOGGER.notice("CWD: {}".format(theme_root))
                     run('csso _tmp/all.pre.css _tmp/all.min.css', cwd=theme_root)
 
 
