@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Lafuente (linux)</title><link>http://lafuente.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://lafuente.io/tags/linux.xml"></atom:link><language>en</language><lastBuildDate>Sat, 15 Mar 2014 21:45:42 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using the KDE Wallet to store ssh keys with passphrases</title><link>http://lafuente.io/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</link><description>&lt;div&gt;&lt;p&gt;I have read an article about SSH passphrases
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lafuente (linux)</title><link>http://lafuente.io/</link><description></description><atom:link rel="self" href="http://lafuente.io/tags/linux.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 15 Mar 2014 22:28:36 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using the KDE Wallet to store ssh keys with passphrases</title><link>http://lafuente.io/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</link><description>&lt;div&gt;&lt;p&gt;I have read an article about SSH passphrases
 (&lt;a class="reference external" href="http://help.github.com/ssh-key-passphrases/"&gt;github:help&lt;/a&gt;), but they only
 explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.&lt;/p&gt;
 &lt;p&gt;This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
@@ -27,7 +27,12 @@ d rwxr-xr-x  2     root  root   4096  ene 24 12:14  dir
 modprobe fuse
 &lt;/pre&gt;
 &lt;p&gt;You can verify that the module is loaded using the following command:&lt;/p&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/load-a-kernel-module.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kernel</category><category>linux</category><guid>http://lafuente.io/posts/load-a-kernel-module.html</guid><pubDate>Sat, 22 Jan 2011 00:00:00 GMT</pubDate></item><item><title>OpenSSH, remote host identification has changed</title><link>http://lafuente.io/posts/remote-host-authentication-changed.html</link><description>&lt;div&gt;&lt;p&gt;Sometimes when I run the ssh command I get this error:&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/load-a-kernel-module.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kernel</category><category>linux</category><guid>http://lafuente.io/posts/load-a-kernel-module.html</guid><pubDate>Sat, 22 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Give sudo access to any user</title><link>http://lafuente.io/posts/give-sudo-access-to-any-user.html</link><description>&lt;div&gt;&lt;p&gt;Normally, after install the OS (Debian in my case), you don't have sudo access,
+and you can see this error:&lt;/p&gt;
+&lt;pre class="code text literal-block"&gt;
+user is not in the sudoers file. This incident will be reported.
+&lt;/pre&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/give-sudo-access-to-any-user.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>sudo</category><category>linux</category><guid>http://lafuente.io/posts/give-sudo-access-to-any-user.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item><item><title>OpenSSH, remote host identification has changed</title><link>http://lafuente.io/posts/remote-host-authentication-changed.html</link><description>&lt;div&gt;&lt;p&gt;Sometimes when I run the ssh command I get this error:&lt;/p&gt;
 &lt;pre class="code text literal-block"&gt;
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
@@ -43,9 +48,4 @@ Offending key in /home/user/.ssh/known_hosts:7
 RSA host key for 192.168.1.5 has changed and you have requested strict checking.
 Host key verification failed.
 &lt;/pre&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/remote-host-authentication-changed.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><guid>http://lafuente.io/posts/remote-host-authentication-changed.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Give sudo access to any user</title><link>http://lafuente.io/posts/give-sudo-access-to-any-user.html</link><description>&lt;div&gt;&lt;p&gt;Normally, after install the OS (Debian in my case), you don't have sudo access,
-and you can see this error:&lt;/p&gt;
-&lt;pre class="code text literal-block"&gt;
-user is not in the sudoers file. This incident will be reported.
-&lt;/pre&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/give-sudo-access-to-any-user.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>sudo</category><category>linux</category><guid>http://lafuente.io/posts/give-sudo-access-to-any-user.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>
+&lt;p class="more"&gt;&lt;a href="http://lafuente.io/posts/remote-host-authentication-changed.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><guid>http://lafuente.io/posts/remote-host-authentication-changed.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>

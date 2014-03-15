@@ -14,11 +14,11 @@
  </url>
  <url>
   <loc>http://lafuente.io/about.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/archive.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/categories/blog.html</loc>
@@ -74,59 +74,67 @@
  </url>
  <url>
   <loc>http://lafuente.io/galleries/demo/index.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/galleries/demo/rss.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/galleries/index.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/galleries/rss.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/index-1.html</loc>
+  <lastmod>2014-03-15</lastmod>
+ </url>
+ <url>
+  <loc>http://lafuente.io/index-2.html</loc>
+  <lastmod>2014-03-10</lastmod>
+ </url>
+ <url>
+  <loc>http://lafuente.io/index-3.html</loc>
   <lastmod>2014-03-10</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/index.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/listings/__pycache__/index.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/listings/hello.py.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/listings/index.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/autofs-configuration.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/file-and-directory-permissions.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/give-sudo-access-to-any-user.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/load-a-kernel-module.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/remote-host-authentication-changed.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/remote_host_authentication_changed.html</loc>
@@ -134,11 +142,11 @@
  </url>
  <url>
   <loc>http://lafuente.io/posts/using-public-keys-with-openssh.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/posts/welcome-to-nikola.html</loc>
@@ -146,15 +154,15 @@
  </url>
  <url>
   <loc>http://lafuente.io/rss.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/autofs.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/autofs.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/blog.html</loc>
@@ -174,31 +182,31 @@
  </url>
  <url>
   <loc>http://lafuente.io/tags/index.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/kde.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/kde.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/kernel.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/kernel.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/linux.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/linux.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/nikola.html</loc>
@@ -210,11 +218,11 @@
  </url>
  <url>
   <loc>http://lafuente.io/tags/openssh.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/openssh.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/python.html</loc>
@@ -226,10 +234,10 @@
  </url>
  <url>
   <loc>http://lafuente.io/tags/sudo.html</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
  <url>
   <loc>http://lafuente.io/tags/sudo.xml</loc>
-  <lastmod>2014-03-10</lastmod>
+  <lastmod>2014-03-15</lastmod>
  </url>
 </urlset>
