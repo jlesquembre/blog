@@ -130,13 +130,13 @@ NAVIGATION_LINKS = {
 #
 
 POSTS = (
-("posts/*.rst", "posts", "post.tmpl"),
-("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.txt", "posts", "post.tmpl"),
 )
 PAGES = (
-("stories/*.rst", "stories", "story.tmpl"),
-("stories/*.txt", "stories", "story.tmpl"),
-("pages/about.rst", "", "about.tmpl"),
+    ("stories/*.rst", "stories", "story.tmpl"),
+    ("stories/*.txt", "stories", "story.tmpl"),
+    ("pages/about.rst", "", "about.tmpl"),
 )
 
 # One or more folders containing files to be copied as-is into the output.
@@ -153,22 +153,22 @@ PAGES = (
 # 'markdown' is MarkDown
 # 'html' assumes the file is html and just copies it
 COMPILERS = {
-"rest": ('.rst', '.txt'),
-"markdown": ('.md', '.mdown', '.markdown'),
-"textile": ('.textile',),
-"txt2tags": ('.t2t',),
-"bbcode": ('.bb',),
-"wiki": ('.wiki',),
-"ipynb": ('.ipynb',),
-"html": ('.html', '.htm'),
-# PHP files are rendered the usual way (i.e. with the full templates).
-# The resulting files have .php extensions, making it possible to run
-# them without reconfiguring your server to recognize them.
-"php": ('.php',),
-# Pandoc detects the input from the source filename
-# but is disabled by default as it would conflict
-# with many of the others.
-# "pandoc": ('.rst', '.md', '.txt'),
+    "rest": ('.rst', '.txt'),
+    "markdown": ('.md', '.mdown', '.markdown'),
+    "textile": ('.textile',),
+    "txt2tags": ('.t2t',),
+    "bbcode": ('.bb',),
+    "wiki": ('.wiki',),
+    "ipynb": ('.ipynb',),
+    "html": ('.html', '.htm'),
+    # PHP files are rendered the usual way (i.e. with the full templates).
+    # The resulting files have .php extensions, making it possible to run
+    # them without reconfiguring your server to recognize them.
+    "php": ('.php',),
+    # Pandoc detects the input from the source filename
+    # but is disabled by default as it would conflict
+    # with many of the others.
+    # "pandoc": ('.rst', '.md', '.txt'),
 }
 
 # Create by default posts in one file format?
