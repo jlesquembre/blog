@@ -62,7 +62,7 @@ Reboot and finish the installation. If network doesn't work do
 
 .. code-block:: text
 
-    systemctl enable dhcpcd
+    systemctl start dhcpcd
 
 
 Helper to finish the installation, original at
