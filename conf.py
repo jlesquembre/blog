@@ -12,7 +12,7 @@ BLOG_AUTHOR = "José Luis Lafuente"
 BLOG_TITLE = "Lafuente"
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://lafuente.io/"
+SITE_URL = "http://lafuente.me/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://getnikola.com/"
