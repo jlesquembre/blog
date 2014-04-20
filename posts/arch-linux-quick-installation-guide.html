@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" href="../assets/css/all.min.css">
 
-    <title>Give sudo access to any user | Lafuente</title>
+    <title>Arch Linux, quick installation guide | Lafuente</title>
 
     
     
@@ -85,49 +85,56 @@
 
 
     <h2 class="post-title">
-        <a href="#" rel="bookmark">Give sudo access to any user</a>
+        <a href="#" rel="bookmark">Arch Linux, quick installation guide</a>
     </h2>
 
     <p class="post-meta">
-       2011-01-18 ·
-       <a class="post-category" href="../tags/sudo.html">sudo</a>
-       <a class="post-category" href="../tags/linux.html">linux</a>
+       2014-03-28 ·
+       <a class="post-category" href="../tags/archlinux.html">archlinux</a>
     </p>
 </header>
 
         <div class="post-description">
-            <p></p><div><p>Normally, after install the OS (Debian in my case), you don't have sudo access,
-and you can see this error:</p>
-<pre class="code text literal-block">
-user is not in the sudoers file. This incident will be reported.
-</pre>
+            <p></p><div><div class="section" id="ipxe">
+<h2>iPXE</h2>
+<p>Install from a USB using <a class="reference external" href="http://ipxe.org/">iPXE</a>.</p>
+<p>Download image from <a class="reference external" href="http://boot.ipxe.org/ipxe.iso">http://boot.ipxe.org/ipxe.iso</a> and copy to an USB stick.</p>
 <!-- TEASER_END: -->
-<p>To solve it, first log in as root, to do it enter:</p>
-<pre class="code bash literal-block">
-su root
+<p>Find your USB</p>
+<pre class="code text literal-block">
+lsblk
 </pre>
-<p>Now, as super user, you can run this command:</p>
-<pre class="code bash literal-block">
-visudo
+<p>Copy the image to the USB</p>
+<pre class="code text literal-block">
+sudo dd if=ipxe.iso of=/dev/sdX
 </pre>
-<p>With this command we open the sudo configuration file, add at the end this line:</p>
-<pre class="code bash literal-block">
-user <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+<p>Now boot with the USB</p>
+</div>
+<div class="section" id="arch-linux-netboot">
+<h2>Arch Linux Netboot</h2>
+<p>Obtain an IP address</p>
+<pre class="code text literal-block">
+dhcp
 </pre>
-<p>Replace <cite>user</cite> with your user name and save the file.
-Don't forget exit from the super user account, simply enter:</p>
-<pre class="code bash literal-block">
-<span class="nb">exit</span>
+<p>Start Arch Linux boot, original link is <a class="reference external" href="http://releng.archlinux.org/pxeboot/arch.ipxe">http://releng.archlinux.org/pxeboot/arch.ipxe</a></p>
+<pre class="code text literal-block">
+chain http://bit.do/archipxe
 </pre>
-<div class="section" id="tip">
-<h2>Tip:</h2>
-<p>If you use Debian, and want to change the default text editor for the system, enter this command:</p>
-<pre class="code bash literal-block">
-sudo update-alternatives --config editor
+<p>Get <a class="reference external" href="https://github.com/helmuthdu/aui">Arch Linux Ultimate Install Script</a></p>
+<pre class="code text literal-block">
+wget http://bit.do/archis
+tar xzf archis
+cd &lt;dir&gt; &amp;&amp; ./ais
 </pre>
-<p>A list with all text editor will appear and you can select your favourite.</p>
-<p>If you want to know where the sudo incident are reported, <a class="reference external" href="http://xkcd.com/">xkcd</a> offers you an explanation:</p>
-<img alt="http://imgs.xkcd.com/comics/incident.png" src="http://imgs.xkcd.com/comics/incident.png">
+<p>Reboot and finish the installation. If network doesn't work do</p>
+<pre class="code text literal-block">
+systemctl start dhcpcd
+</pre>
+<p>Helper to finish the installation, original at
+<a class="reference external" href="https://raw.githubusercontent.com/jlesquembre/arch_install_script/master/ais.sh">https://raw.githubusercontent.com/jlesquembre/arch_install_script/master/ais.sh</a></p>
+<pre class="code text literal-block">
+wget http://bit.do/jlais
+</pre>
 </div></div>
         </div>
     </section>

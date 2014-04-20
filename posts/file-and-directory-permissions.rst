@@ -30,8 +30,7 @@ Numbers from 1 to 8 are not really in the output, but are here to clarify every 
 1. First character specifies the type of the file. In the example above the
    hyphen (`-`) in the first character indicates that this is a normal file, and
    the `d` indicates that this other file is a directory. `List with all file
-   types
-   <http://en.wikipedia.org/wiki/Filesystem_permissions#Notation_of_traditional_Unix_permissions>`_
+   types <http://en.wikipedia.org/wiki/Unix_file_types>`_
 
 2. Next 9 characters specifies the files permission. Each 3 characters refers
    to the read, write and execute permissions for user, group and others. In
