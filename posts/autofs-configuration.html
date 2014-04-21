@@ -96,22 +96,24 @@
 </header>
 
         <div class="post-description">
-            <p></p><div><p>Autofs uses <cite>/etc/auto.master</cite> as its default primary configuration file. We
-can define two kind of maps in this file, direct and indirect. An example:</p>
+            <p></p><div><p>Autofs uses <cite>/etc/autofs/auto.master</cite> as its default primary configuration
+file. We can define two kind of maps in this file, direct and indirect. An
+example:</p>
 <pre class="code text literal-block">
 # mount point   config file        options
-/-              /etc/auto.direct   --ghost
-/misc           /etc/auto.misc     --timeout=30 --ghost
+/-              /etc/autofs/auto.direct   --ghost
+/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
+/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
 +auto.master
 </pre>
 <!-- TEASER_END: -->
-<p>First map is a direct map, second is indirect. Entries in a direct map contain
-an absolute path, instead of the relative path names used in indirect maps. The
-<cite>--ghost</cite> option tells the automounter to create empty directories of all the
-mount points. The <cite>/misc</cite> folder should be empty.
-Let's see the other configuration files, in this example we are going to mount
-remote file systems using cifs.</p>
-<p><cite>/etc/auto.direct</cite></p>
+<p>First map is a direct map, the other two are indirect. Entries in a direct map
+contain an absolute path, instead of the relative path names used in indirect
+maps. The <cite>--ghost</cite> option tells the automounter to create empty directories of
+all the mount points. The <cite>/media</cite> folder should be empty.  Let's see the other
+configuration files, in this example we are going to mount a remote file system
+using cifs and ssh.</p>
+<p><cite>/etc/autofs/auto.direct</cite></p>
 <pre class="code text literal-block">
 # directory          mount options                      device to mount
 /home/ian/music      -fstype=cifs,ro,soft,user=guest    ://192.168.1.10/music
@@ -119,13 +121,19 @@ remote file systems using cifs.</p>
 </pre>
 <p>Folders <cite>/home/ian/music</cite> and <cite>/home/deb/music</cite> should be empty or not exist. In
 both we can access to te remote folder /music in computer 192.168.1.10</p>
-<p><cite>/etc/auto.misc</cite></p>
+<p><cite>/etc/autofs/auto.cifs</cite></p>
 <pre class="code text literal-block">
-# directory  mount options                        device to mount
-ian          -fstype=cifs,ro,soft,user=ian        ://192.168.1.10/export/home/ian
-deb          -fstype=cifs,ro,soft,user=deb        ://192.168.1.10/export/home/deb
+# directory      mount options                        device to mount
+ian              -fstype=cifs,ro,soft,user=ian        ://192.168.1.10/export/home/ian
+deb              -fstype=cifs,ro,soft,user=deb        ://192.168.1.10/export/home/deb
 </pre>
-<p>Folders <cite>/misc/ian</cite> and <cite>/misc/deb</cite> will be created.</p></div>
+<p>Folders <cite>/media/cifs/ian</cite> and <cite>/media/cifs/deb</cite> will be created.</p>
+<p><cite>/etc/autofs/auto.sshfs</cite></p>
+<pre class="code text literal-block">
+# directory     mount options                                               device to mount
+ian_ssh         -fstype=fuse,rw,allow_other,IdentityFile=/path/to/ssh_key   :sshfs\#user@192.168.1.10\:/mnt/folder/
+</pre>
+<p>Folder <cite>/media/sshfs/ain_ssh</cite> will be created.</p></div>
         </div>
     </section>
 

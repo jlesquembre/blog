@@ -156,12 +156,14 @@ we use the key, KDE Wallet does the job. I assume you are using KDE.</p>
 
 
         <div class="post-description">
-            <p> </p><div><p>Autofs uses <cite>/etc/auto.master</cite> as its default primary configuration file. We
-can define two kind of maps in this file, direct and indirect. An example:</p>
+            <p> </p><div><p>Autofs uses <cite>/etc/autofs/auto.master</cite> as its default primary configuration
+file. We can define two kind of maps in this file, direct and indirect. An
+example:</p>
 <pre class="code text literal-block">
 # mount point   config file        options
-/-              /etc/auto.direct   --ghost
-/misc           /etc/auto.misc     --timeout=30 --ghost
+/-              /etc/autofs/auto.direct   --ghost
+/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
+/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
 +auto.master
 </pre>
 <p class="more"><a href="posts/autofs-configuration.html"> </a></p></div> 

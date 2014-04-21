@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lafuente</title><link>http://lafuente.me/</link><description>This is a demo site for Nikola.</description><atom:link rel="self" type="application/rss+xml" href="http://lafuente.me/rss.xml"></atom:link><language>en</language><lastBuildDate>Sun, 20 Apr 2014 13:01:31 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Arch Linux, quick installation guide</title><link>http://lafuente.me/posts/arch-linux-quick-installation-guide.html</link><description>&lt;div class="section" id="ipxe"&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lafuente</title><link>http://lafuente.me/</link><description>This is a demo site for Nikola.</description><atom:link href="http://lafuente.me/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 21 Apr 2014 16:19:37 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Arch Linux, quick installation guide</title><link>http://lafuente.me/posts/arch-linux-quick-installation-guide.html</link><description>&lt;div class="section" id="ipxe"&gt;
 &lt;h2&gt;iPXE&lt;/h2&gt;
 &lt;p&gt;Install from a USB using &lt;a class="reference external" href="http://ipxe.org/"&gt;iPXE&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Download image from &lt;a class="reference external" href="http://boot.ipxe.org/ipxe.iso"&gt;http://boot.ipxe.org/ipxe.iso&lt;/a&gt; and copy to an USB stick.&lt;/p&gt;
@@ -9,12 +9,14 @@ explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.&lt;/
 &lt;p&gt;This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
 SSH keys with passphrases, but we don't need to enter a passphrase every time
 we use the key, KDE Wallet does the job. I assume you are using KDE.&lt;/p&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><category>kde</category><guid>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</guid><pubDate>Fri, 09 Mar 2012 11:49:46 GMT</pubDate></item><item><title>Autofs configuration</title><link>http://lafuente.me/posts/autofs-configuration.html</link><description>&lt;div&gt;&lt;p&gt;Autofs uses &lt;cite&gt;/etc/auto.master&lt;/cite&gt; as its default primary configuration file. We
-can define two kind of maps in this file, direct and indirect. An example:&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><category>kde</category><guid>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</guid><pubDate>Fri, 09 Mar 2012 11:49:46 GMT</pubDate></item><item><title>Autofs configuration</title><link>http://lafuente.me/posts/autofs-configuration.html</link><description>&lt;div&gt;&lt;p&gt;Autofs uses &lt;cite&gt;/etc/autofs/auto.master&lt;/cite&gt; as its default primary configuration
+file. We can define two kind of maps in this file, direct and indirect. An
+example:&lt;/p&gt;
 &lt;pre class="code text literal-block"&gt;
 # mount point   config file        options
-/-              /etc/auto.direct   --ghost
-/misc           /etc/auto.misc     --timeout=30 --ghost
+/-              /etc/autofs/auto.direct   --ghost
+/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
+/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
 +auto.master
 &lt;/pre&gt;
 &lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/autofs-configuration.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>autofs</category><guid>http://lafuente.me/posts/autofs-configuration.html</guid><pubDate>Fri, 11 Mar 2011 00:00:00 GMT</pubDate></item><item><title>Using public keys with openSSH</title><link>http://lafuente.me/posts/using-public-keys-with-openssh.html</link><description>&lt;div&gt;&lt;img alt="/images/sshconnection.png" src="http://lafuente.me/images/sshconnection.png"&gt;
