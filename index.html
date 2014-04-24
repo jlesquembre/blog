@@ -82,6 +82,51 @@
 
 
     <h2 class="post-title">
+        <a href="posts/gnupg-notes.html" rel="bookmark">GnuPG Notes</a>
+    </h2>
+
+    <p class="post-meta">
+       2014-04-24 ·
+       <a class="post-category" href="tags/gnupg.html">gnupg</a>
+    </p>
+</header>
+
+
+        <div class="post-description">
+            <p> </p><div class="section" id="create-new-key">
+<h2>Create new key</h2>
+<p>Create or edit the file <cite>~/.gnupg/gpg.conf</cite> and add the following lines to use
+the cryptographically stronger SHA512 hashing algorithm for signatures in
+preference to SHA1 algorithm.</p>
+<pre class="code text literal-block">
+personal-digest-preferences SHA512
+cert-digest-algo SHA512
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+</pre>
+<p>Now we can generate the keys:</p>
+<pre class="code bash literal-block">
+gpg --gen-key
+</pre>
+<p>The system will prompt us to generate some entropy, we can just run this in
+other terminal. Any expensive operation over the file system, like <cite>find</cite>
+would we also ok.</p>
+<pre class="code bash literal-block">
+ls -R ~
+</pre>
+<p class="more"><a href="posts/gnupg-notes.html"> </a></p></div> 
+        </div>
+        <p><a class="post-author" href="posts/gnupg-notes.html">Read more...</a></p>
+        <h1 class="content-subhead"></h1>
+    </section>
+    <!-- A single blog post -->
+    <section class="post">
+        
+
+
+<header class="post-header">
+
+
+    <h2 class="post-title">
         <a href="posts/arch-linux-quick-installation-guide.html" rel="bookmark">Arch Linux, quick installation guide</a>
     </h2>
 
@@ -196,39 +241,6 @@ example:</p>
 <p class="more"><a href="posts/using-public-keys-with-openssh.html"> </a></p></div> 
         </div>
         <p><a class="post-author" href="posts/using-public-keys-with-openssh.html">Read more...</a></p>
-        <h1 class="content-subhead"></h1>
-    </section>
-    <!-- A single blog post -->
-    <section class="post">
-        
-
-
-<header class="post-header">
-
-
-    <h2 class="post-title">
-        <a href="posts/file-and-directory-permissions.html" rel="bookmark">File and directory permissions</a>
-    </h2>
-
-    <p class="post-meta">
-       2011-01-24 ·
-       <a class="post-category" href="tags/linux.html">linux</a>
-    </p>
-</header>
-
-
-        <div class="post-description">
-            <p> </p><div><p>The best way to understand the Linux permissions, is with an example. If we run
-the command <cite>ls -l</cite> we get an output like this:</p>
-<pre class="code text literal-block">
-1 2          3     4     5      6     7             8
-- rw-r-----  1     user  users     8  ene 24 11:01  f.txt
-d rwxr-xr-x  2     root  root   4096  ene 24 12:14  dir
-</pre>
-<p>which maps to</p>
-<p class="more"><a href="posts/file-and-directory-permissions.html"> </a></p></div> 
-        </div>
-        <p><a class="post-author" href="posts/file-and-directory-permissions.html">Read more...</a></p>
         <h1 class="content-subhead"></h1>
     </section>
 
