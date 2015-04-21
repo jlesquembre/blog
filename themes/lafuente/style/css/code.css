@@ -40,6 +40,7 @@ pre.code .nt, div.code pre .nt { color: #062873; font-weight: bold } /* Name.Tag
 pre.code .nv, div.code pre .nv { color: #bb60d5 } /* Name.Variable */
 pre.code .ow, div.code pre .ow { color: #007020; font-weight: bold } /* Operator.Word */
 pre.code .w, div.code pre .w { color: #bbbbbb } /* Text.Whitespace */
+pre.code .mb, div.code pre .mb { color: #40a070 } /* Literal.Number.Bin */
 pre.code .mf, div.code pre .mf { color: #40a070 } /* Literal.Number.Float */
 pre.code .mh, div.code pre .mh { color: #40a070 } /* Literal.Number.Hex */
 pre.code .mi, div.code pre .mi { color: #40a070 } /* Literal.Number.Integer */

@@ -1,3 +1,4 @@
 sarge
 doc2git
 nikola
+webassets
