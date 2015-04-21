@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Lafuente (openssh)</title><link>http://lafuente.me/</link><description></description><atom:link href="http://lafuente.me/tags/openssh.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 24 Apr 2014 20:47:29 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using the KDE Wallet to store ssh keys with passphrases</title><link>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</link><description>&lt;div&gt;&lt;p&gt;I have read an article about SSH passphrases
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Lafuente (openssh)</title><link>http://lafuente.me/</link><description></description><atom:link rel="self" href="http://lafuente.me/tags/openssh.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Apr 2015 12:05:58 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using the KDE Wallet to store ssh keys with passphrases</title><link>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;I have read an article about SSH passphrases
 (&lt;a class="reference external" href="http://help.github.com/ssh-key-passphrases/"&gt;github:help&lt;/a&gt;), but they only
 explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.&lt;/p&gt;
 &lt;p&gt;This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
 SSH keys with passphrases, but we don't need to enter a passphrase every time
 we use the key, KDE Wallet does the job. I assume you are using KDE.&lt;/p&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><category>kde</category><guid>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</guid><pubDate>Fri, 09 Mar 2012 11:49:46 GMT</pubDate></item><item><title>Using public keys with openSSH</title><link>http://lafuente.me/posts/using-public-keys-with-openssh.html</link><description>&lt;div&gt;&lt;img alt="/images/sshconnection.png" src="http://lafuente.me/images/sshconnection.png"&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-public-keys-with-openssh.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/using-public-keys-with-openssh.html</guid><pubDate>Thu, 27 Jan 2011 00:00:00 GMT</pubDate></item><item><title>OpenSSH, remote host identification has changed</title><link>http://lafuente.me/posts/remote-host-authentication-changed.html</link><description>&lt;div&gt;&lt;p&gt;Sometimes when I run the ssh command I get this error:&lt;/p&gt;
-&lt;pre class="code text literal-block"&gt;
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that the RSA host key has just been changed.
-The fingerprint for the RSA key sent by the remote host is
-xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
-Please contact your system administrator.
-Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
-Offending key in /home/user/.ssh/known_hosts:7
-RSA host key for 192.168.1.5 has changed and you have requested strict checking.
-Host key verification failed.
-&lt;/pre&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/remote-host-authentication-changed.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><guid>http://lafuente.me/posts/remote-host-authentication-changed.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>
+&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kde</category><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</guid><pubDate>Fri, 09 Mar 2012 11:49:46 GMT</pubDate></item><item><title>Using public keys with openSSH</title><link>http://lafuente.me/posts/using-public-keys-with-openssh.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;img alt="/images/sshconnection.png" src="http://lafuente.me/images/sshconnection.png"&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-public-keys-with-openssh.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/using-public-keys-with-openssh.html</guid><pubDate>Thu, 27 Jan 2011 00:00:00 GMT</pubDate></item><item><title>OpenSSH, remote host identification has changed</title><link>http://lafuente.me/posts/remote-host-authentication-changed.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;Sometimes when I run the ssh command I get this error:&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-1"&gt;&lt;/a&gt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-2"&gt;&lt;/a&gt;@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-3"&gt;&lt;/a&gt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-4"&gt;&lt;/a&gt;IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-5"&gt;&lt;/a&gt;Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-6"&gt;&lt;/a&gt;It is also possible that the RSA host key has just been changed.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-7"&gt;&lt;/a&gt;The fingerprint for the RSA key sent by the remote host is
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-8"&gt;&lt;/a&gt;xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-9"&gt;&lt;/a&gt;Please contact your system administrator.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-10"&gt;&lt;/a&gt;Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-11"&gt;&lt;/a&gt;Offending key in /home/user/.ssh/known_hosts:7
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-12"&gt;&lt;/a&gt;RSA host key for 192.168.1.5 has changed and you have requested strict checking.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-13"&gt;&lt;/a&gt;Host key verification failed.
+&lt;/pre&gt;&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/remote-host-authentication-changed.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/remote-host-authentication-changed.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>

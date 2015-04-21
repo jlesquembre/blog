@@ -35,3 +35,8 @@ command:
 
 
 And now I can access again to the remote host.
+
+
+An alternative is to set `StrictHostKeyChecking` to `no` in your ssh_config.
+For a better description, take a look to the end of `this article
+<http://blogs.atlassian.com/2011/05/advanced_ssh_for_developers/>`_.

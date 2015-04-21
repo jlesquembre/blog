@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,27 +94,26 @@
 
 
         <div class="post-description">
-            <p> </p><div class="section" id="create-new-key">
+            <p> </p>
+<div class="section" id="create-new-key">
 <h2>Create new key</h2>
 <p>Create or edit the file <cite>~/.gnupg/gpg.conf</cite> and add the following lines to use
 the cryptographically stronger SHA512 hashing algorithm for signatures in
 preference to SHA1 algorithm.</p>
-<pre class="code text literal-block">
-personal-digest-preferences SHA512
-cert-digest-algo SHA512
-default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+<pre class="code text"><a name="rest_code_6758e116826046ada140c894bed3a72a-1"></a>personal-digest-preferences SHA512
+<a name="rest_code_6758e116826046ada140c894bed3a72a-2"></a>cert-digest-algo SHA512
+<a name="rest_code_6758e116826046ada140c894bed3a72a-3"></a>default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
 </pre>
 <p>Now we can generate the keys:</p>
-<pre class="code bash literal-block">
-gpg --gen-key
+<pre class="code bash"><a name="rest_code_7e01b5a7e0694c94bf55ba052665776e-1"></a>gpg --gen-key
 </pre>
 <p>The system will prompt us to generate some entropy, we can just run this in
 other terminal. Any expensive operation over the file system, like <cite>find</cite>
 would we also ok.</p>
-<pre class="code bash literal-block">
-ls -R ~
+<pre class="code bash"><a name="rest_code_538057e0311b4d8eb42b82c8517f9b31-1"></a>ls -R ~
 </pre>
-<p class="more"><a href="posts/gnupg-notes.html"> </a></p></div> 
+<p class="more"><a href="posts/gnupg-notes.html"> </a></p>
+</div> 
         </div>
         <p><a class="post-author" href="posts/gnupg-notes.html">Read more...</a></p>
         <h1 class="content-subhead"></h1>
@@ -138,11 +138,13 @@ ls -R ~
 
 
         <div class="post-description">
-            <p> </p><div class="section" id="ipxe">
+            <p> </p>
+<div class="section" id="ipxe">
 <h2>iPXE</h2>
 <p>Install from a USB using <a class="reference external" href="http://ipxe.org/">iPXE</a>.</p>
 <p>Download image from <a class="reference external" href="http://boot.ipxe.org/ipxe.iso">http://boot.ipxe.org/ipxe.iso</a> and copy to an USB stick.</p>
-<p class="more"><a href="posts/arch-linux-quick-installation-guide.html"> </a></p></div> 
+<p class="more"><a href="posts/arch-linux-quick-installation-guide.html"> </a></p>
+</div> 
         </div>
         <p><a class="post-author" href="posts/arch-linux-quick-installation-guide.html">Read more...</a></p>
         <h1 class="content-subhead"></h1>
@@ -161,21 +163,24 @@ ls -R ~
 
     <p class="post-meta">
        2012-03-09 ·
-       <a class="post-category" href="tags/openssh.html">openssh</a>
-       <a class="post-category" href="tags/linux.html">linux</a>
        <a class="post-category" href="tags/kde.html">kde</a>
+       <a class="post-category" href="tags/linux.html">linux</a>
+       <a class="post-category" href="tags/openssh.html">openssh</a>
     </p>
 </header>
 
 
         <div class="post-description">
-            <p> </p><div><p>I have read an article about SSH passphrases
+            <p> </p>
+<div>
+<p>I have read an article about SSH passphrases
 (<a class="reference external" href="http://help.github.com/ssh-key-passphrases/">github:help</a>), but they only
 explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.</p>
 <p>This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
 SSH keys with passphrases, but we don't need to enter a passphrase every time
 we use the key, KDE Wallet does the job. I assume you are using KDE.</p>
-<p class="more"><a href="posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"> </a></p></div> 
+<p class="more"><a href="posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"> </a></p>
+</div> 
         </div>
         <p><a class="post-author" href="posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html">Read more...</a></p>
         <h1 class="content-subhead"></h1>
@@ -194,24 +199,26 @@ we use the key, KDE Wallet does the job. I assume you are using KDE.</p>
 
     <p class="post-meta">
        2011-03-11 ·
-       <a class="post-category" href="tags/linux.html">linux</a>
        <a class="post-category" href="tags/autofs.html">autofs</a>
+       <a class="post-category" href="tags/linux.html">linux</a>
     </p>
 </header>
 
 
         <div class="post-description">
-            <p> </p><div><p>Autofs uses <cite>/etc/autofs/auto.master</cite> as its default primary configuration
+            <p> </p>
+<div>
+<p>Autofs uses <cite>/etc/autofs/auto.master</cite> as its default primary configuration
 file. We can define two kind of maps in this file, direct and indirect. An
 example:</p>
-<pre class="code text literal-block">
-# mount point   config file        options
-/-              /etc/autofs/auto.direct   --ghost
-/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
-/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
-+auto.master
+<pre class="code text"><a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-1"></a># mount point   config file        options
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-2"></a>/-              /etc/autofs/auto.direct   --ghost
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-3"></a>/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-4"></a>/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-5"></a>+auto.master
 </pre>
-<p class="more"><a href="posts/autofs-configuration.html"> </a></p></div> 
+<p class="more"><a href="posts/autofs-configuration.html"> </a></p>
+</div> 
         </div>
         <p><a class="post-author" href="posts/autofs-configuration.html">Read more...</a></p>
         <h1 class="content-subhead"></h1>
@@ -237,8 +244,11 @@ example:</p>
 
 
         <div class="post-description">
-            <p> </p><div><img alt="/images/sshconnection.png" src="images/sshconnection.png">
-<p class="more"><a href="posts/using-public-keys-with-openssh.html"> </a></p></div> 
+            <p> </p>
+<div>
+<img alt="/images/sshconnection.png" src="images/sshconnection.png">
+<p class="more"><a href="posts/using-public-keys-with-openssh.html"> </a></p>
+</div> 
         </div>
         <p><a class="post-author" href="posts/using-public-keys-with-openssh.html">Read more...</a></p>
         <h1 class="content-subhead"></h1>

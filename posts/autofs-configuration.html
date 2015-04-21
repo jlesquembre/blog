@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,21 +91,22 @@
 
     <p class="post-meta">
        2011-03-11 ·
-       <a class="post-category" href="../tags/linux.html">linux</a>
        <a class="post-category" href="../tags/autofs.html">autofs</a>
+       <a class="post-category" href="../tags/linux.html">linux</a>
     </p>
 </header>
 
         <div class="post-description">
-            <p></p><div><p>Autofs uses <cite>/etc/autofs/auto.master</cite> as its default primary configuration
+            <p></p>
+<div>
+<p>Autofs uses <cite>/etc/autofs/auto.master</cite> as its default primary configuration
 file. We can define two kind of maps in this file, direct and indirect. An
 example:</p>
-<pre class="code text literal-block">
-# mount point   config file        options
-/-              /etc/autofs/auto.direct   --ghost
-/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
-/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
-+auto.master
+<pre class="code text"><a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-1"></a># mount point   config file        options
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-2"></a>/-              /etc/autofs/auto.direct   --ghost
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-3"></a>/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-4"></a>/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
+<a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-5"></a>+auto.master
 </pre>
 <!-- TEASER_END: -->
 <p>First map is a direct map, the other two are indirect. Entries in a direct map
@@ -114,26 +116,24 @@ all the mount points. The <cite>/media</cite> folder should be empty.  Let's see
 configuration files, in this example we are going to mount a remote file system
 using cifs and ssh.</p>
 <p><cite>/etc/autofs/auto.direct</cite></p>
-<pre class="code text literal-block">
-# directory          mount options                      device to mount
-/home/ian/music      -fstype=cifs,ro,soft,user=guest    ://192.168.1.10/music
-/home/deb/music      -fstype=cifs,ro,soft,user=guest    ://192.168.1.10/music
+<pre class="code text"><a name="rest_code_0c085e2ef3194e10814ab9ad9497e741-1"></a># directory          mount options                      device to mount
+<a name="rest_code_0c085e2ef3194e10814ab9ad9497e741-2"></a>/home/ian/music      -fstype=cifs,ro,soft,user=guest    ://192.168.1.10/music
+<a name="rest_code_0c085e2ef3194e10814ab9ad9497e741-3"></a>/home/deb/music      -fstype=cifs,ro,soft,user=guest    ://192.168.1.10/music
 </pre>
 <p>Folders <cite>/home/ian/music</cite> and <cite>/home/deb/music</cite> should be empty or not exist. In
 both we can access to te remote folder /music in computer 192.168.1.10</p>
 <p><cite>/etc/autofs/auto.cifs</cite></p>
-<pre class="code text literal-block">
-# directory      mount options                        device to mount
-ian              -fstype=cifs,ro,soft,user=ian        ://192.168.1.10/export/home/ian
-deb              -fstype=cifs,ro,soft,user=deb        ://192.168.1.10/export/home/deb
+<pre class="code text"><a name="rest_code_bb3476d5771d4fe6bab1bff5ffd1e43c-1"></a># directory      mount options                        device to mount
+<a name="rest_code_bb3476d5771d4fe6bab1bff5ffd1e43c-2"></a>ian              -fstype=cifs,ro,soft,user=ian        ://192.168.1.10/export/home/ian
+<a name="rest_code_bb3476d5771d4fe6bab1bff5ffd1e43c-3"></a>deb              -fstype=cifs,ro,soft,user=deb        ://192.168.1.10/export/home/deb
 </pre>
 <p>Folders <cite>/media/cifs/ian</cite> and <cite>/media/cifs/deb</cite> will be created.</p>
 <p><cite>/etc/autofs/auto.sshfs</cite></p>
-<pre class="code text literal-block">
-# directory     mount options                                               device to mount
-ian_ssh         -fstype=fuse,rw,allow_other,IdentityFile=/path/to/ssh_key   :sshfs\#user@192.168.1.10\:/mnt/folder/
+<pre class="code text"><a name="rest_code_4818a7e87c344f5f8f2c81055656f53d-1"></a># directory     mount options                                               device to mount
+<a name="rest_code_4818a7e87c344f5f8f2c81055656f53d-2"></a>ian_ssh         -fstype=fuse,rw,allow_other,IdentityFile=/path/to/ssh_key   :sshfs\#user@192.168.1.10\:/mnt/folder/
 </pre>
-<p>Folder <cite>/media/sshfs/ain_ssh</cite> will be created.</p></div>
+<p>Folder <cite>/media/sshfs/ain_ssh</cite> will be created.</p>
+</div>
         </div>
     </section>
 
@@ -149,7 +149,8 @@ ian_ssh         -fstype=fuse,rw,allow_other,IdentityFile=/path/to/ssh_key   :ssh
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 

@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,13 +97,14 @@
 </header>
 
         <div class="post-description">
-            <p></p><div><img alt="/images/sshconnection.png" src="../images/sshconnection.png">
+            <p></p>
+<div>
+<img alt="/images/sshconnection.png" src="../images/sshconnection.png">
 <!-- TEASER_END: -->
 <div class="section" id="generate-the-key">
 <h2>Generate the key</h2>
 <p>We need to create a public key, we do it in computer A:</p>
-<pre class="code bash literal-block">
-ssh-keygen -t rsa -b 2048 -f /home/user_name/.ssh/key-name
+<pre class="code bash"><a name="rest_code_40a4ffae964d4db29a47972ea8cb852e-1"></a>ssh-keygen -t rsa -b <span class="m">2048</span> -f /home/user_name/.ssh/key-name
 </pre>
 <p>Press always intro when asked to generate a key without passphrase. This is
 less secure, but it can be really useful.  Now we have in our .ssh folder the
@@ -111,20 +113,17 @@ keys (key-name and key-name.pub)</p>
 <div class="section" id="copy-public-key">
 <h2>Copy public key</h2>
 <p>Copy the public key to the remote host you wish to access (in our example from computer A to B) and add it to the file</p>
-<pre class="code bash literal-block">
-~/.ssh/authorized_keys
+<pre class="code bash"><a name="rest_code_f63b2a4bde294a1eaaa8cc7ac513438e-1"></a>~/.ssh/authorized_keys
 </pre>
 <p>If that file does not exist then you should create it.
 Or you can use ssh-copy-id to log into a remote machine and append the indicated identity file to that machine's ~/.ssh/authorized_keys file.</p>
-<pre class="code bash literal-block">
-ssh-copy-id <span class="o">[</span>-i <span class="o">[</span>identity_file<span class="o">]]</span> <span class="o">[</span>user@<span class="o">]</span>machine
+<pre class="code bash"><a name="rest_code_a8f8dc0b5c514a51af826937265d775c-1"></a>ssh-copy-id <span class="o">[</span>-i <span class="o">[</span>identity_file<span class="o">]]</span> <span class="o">[</span>user@<span class="o">]</span>machine
 </pre>
 </div>
 <div class="section" id="test-it">
 <h2>Test it</h2>
 <p>In computer A run this command:</p>
-<pre class="code bash literal-block">
-ssh -i key user@computerB_IP
+<pre class="code bash"><a name="rest_code_d808991a266b4eada678a08ce2a24d29-1"></a>ssh -i key user@computerB_IP
 </pre>
 <p>If every thing is fine, you should be able to connect to computer B with this
 command.</p>
@@ -134,25 +133,22 @@ command.</p>
 <p>You can create alias for your ssh connections, this way, you don't need to
 remember usernames, IPs, etc...</p>
 <p>First, create this file:</p>
-<pre class="code bash literal-block">
-~/.ssh/config
+<pre class="code bash"><a name="rest_code_b69d4ac452d14efda7acc704f2f98588-1"></a>~/.ssh/config
 </pre>
 <p>with this content:</p>
-<pre class="code bash literal-block">
-Host <span class="nb">alias
-</span>HostName computerB_IP
-User username
-IdentityFile ~/.ssh/path/to/key
+<pre class="code bash"><a name="rest_code_c3f0a822e58f415faf67e653d11a4de0-1"></a>Host <span class="nb">alias</span>
+<a name="rest_code_c3f0a822e58f415faf67e653d11a4de0-2"></a>HostName computerB_IP
+<a name="rest_code_c3f0a822e58f415faf67e653d11a4de0-3"></a>User username
+<a name="rest_code_c3f0a822e58f415faf67e653d11a4de0-4"></a>IdentityFile ~/.ssh/path/to/key
 </pre>
 <p>Now it is possible connent with this command:</p>
-<pre class="code bash literal-block">
-ssh <span class="nb">alias</span>
+<pre class="code bash"><a name="rest_code_48147f640d2a4cf482a8b0a033248179-1"></a>ssh <span class="nb">alias</span>
 </pre>
 <p>Great, isn't it? For a complete connect list for the ssh config file, type</p>
-<pre class="code bash literal-block">
-man ssh_config
+<pre class="code bash"><a name="rest_code_625df059d5344511a4d9398d51f08ddf-1"></a>man ssh_config
 </pre>
-</div></div>
+</div>
+</div>
         </div>
     </section>
 
@@ -168,7 +164,8 @@ man ssh_config
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 

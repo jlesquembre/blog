@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,28 +97,28 @@
 </header>
 
         <div class="post-description">
-            <p></p><div><p>In Linux, to load a kernel module (for example, fuse) run:</p>
-<pre class="code bash literal-block">
-modprobe fuse
+            <p></p>
+<div>
+<p>In Linux, to load a kernel module (for example, fuse) run:</p>
+<pre class="code bash"><a name="rest_code_e1e5bef8f08445689d9d011b184af119-1"></a>modprobe fuse
 </pre>
 <p>You can verify that the module is loaded using the following command:</p>
 <!-- TEASER_END: -->
-<pre class="code bash literal-block">
-dmesg | grep -i fuse
+<pre class="code bash"><a name="rest_code_6ad45d00ef944a9381bd0d1c4fe716ef-1"></a>dmesg <span class="p">|</span> grep -i fuse
 </pre>
 <p>If you want it to to load a module, add that module to <cite>/etc/modules</cite>, an example file:</p>
-<pre class="code bash literal-block">
-<span class="c"># /etc/modules: kernel modules to load at boot time.
-#
-# This file contains the names of kernel modules that should be loaded
-# at boot time, one per line. Lines beginning with "#" are ignored.
-# Parameters can be specified after the module name.
-</span>
-fuse
+<pre class="code bash"><a name="rest_code_56d44041e7ca41daa0ee8d9596a4e3e8-1"></a><span class="c"># /etc/modules: kernel modules to load at boot time.</span>
+<a name="rest_code_56d44041e7ca41daa0ee8d9596a4e3e8-2"></a><span class="c">#</span>
+<a name="rest_code_56d44041e7ca41daa0ee8d9596a4e3e8-3"></a><span class="c"># This file contains the names of kernel modules that should be loaded</span>
+<a name="rest_code_56d44041e7ca41daa0ee8d9596a4e3e8-4"></a><span class="c"># at boot time, one per line. Lines beginning with "#" are ignored.</span>
+<a name="rest_code_56d44041e7ca41daa0ee8d9596a4e3e8-5"></a><span class="c"># Parameters can be specified after the module name.</span>
+<a name="rest_code_56d44041e7ca41daa0ee8d9596a4e3e8-6"></a>
+<a name="rest_code_56d44041e7ca41daa0ee8d9596a4e3e8-7"></a>fuse
 </pre>
 <p>And if you want to cofigure some options for that kernel module do it in the
 folder <cite>/etc/modules</cite>, in our example put the options in the file
-<cite>/etc/modules/fuse</cite></p></div>
+<cite>/etc/modules/fuse</cite></p>
+</div>
         </div>
     </section>
 
@@ -133,7 +134,8 @@ folder <cite>/etc/modules</cite>, in our example put the options in the file
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 

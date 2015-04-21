@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,45 +91,42 @@
 
     <p class="post-meta">
        2011-01-18 ·
-       <a class="post-category" href="../tags/sudo.html">sudo</a>
        <a class="post-category" href="../tags/linux.html">linux</a>
+       <a class="post-category" href="../tags/sudo.html">sudo</a>
     </p>
 </header>
 
         <div class="post-description">
-            <p></p><div><p>Normally, after install the OS (Debian in my case), you don't have sudo access,
+            <p></p>
+<div>
+<p>Normally, after install the OS (Debian in my case), you don't have sudo access,
 and you can see this error:</p>
-<pre class="code text literal-block">
-user is not in the sudoers file. This incident will be reported.
+<pre class="code text"><a name="rest_code_09983003d42849bdba1f4eb27b141443-1"></a>user is not in the sudoers file. This incident will be reported.
 </pre>
 <!-- TEASER_END: -->
 <p>To solve it, first log in as root, to do it enter:</p>
-<pre class="code bash literal-block">
-su root
+<pre class="code bash"><a name="rest_code_6d3e072297624bce9b10a41a6bbfc351-1"></a>su root
 </pre>
 <p>Now, as super user, you can run this command:</p>
-<pre class="code bash literal-block">
-visudo
+<pre class="code bash"><a name="rest_code_567848c33d5442ce96aa492a8967619a-1"></a>visudo
 </pre>
 <p>With this command we open the sudo configuration file, add at the end this line:</p>
-<pre class="code bash literal-block">
-user <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+<pre class="code bash"><a name="rest_code_36352bdafef04c6d931968ea3f6c558e-1"></a>user <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
 </pre>
 <p>Replace <cite>user</cite> with your user name and save the file.
 Don't forget exit from the super user account, simply enter:</p>
-<pre class="code bash literal-block">
-<span class="nb">exit</span>
+<pre class="code bash"><a name="rest_code_1c90aa5924634c5382d80f420722375f-1"></a><span class="nb">exit</span>
 </pre>
 <div class="section" id="tip">
 <h2>Tip:</h2>
 <p>If you use Debian, and want to change the default text editor for the system, enter this command:</p>
-<pre class="code bash literal-block">
-sudo update-alternatives --config editor
+<pre class="code bash"><a name="rest_code_835d07a3d0234d4cbd51276097e7e39c-1"></a>sudo update-alternatives --config editor
 </pre>
 <p>A list with all text editor will appear and you can select your favourite.</p>
 <p>If you want to know where the sudo incident are reported, <a class="reference external" href="http://xkcd.com/">xkcd</a> offers you an explanation:</p>
 <img alt="http://imgs.xkcd.com/comics/incident.png" src="http://imgs.xkcd.com/comics/incident.png">
-</div></div>
+</div>
+</div>
         </div>
     </section>
 
@@ -144,7 +142,8 @@ sudo update-alternatives --config editor
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 

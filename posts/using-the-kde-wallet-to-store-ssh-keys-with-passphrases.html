@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,14 +91,16 @@
 
     <p class="post-meta">
        2012-03-09 ·
-       <a class="post-category" href="../tags/openssh.html">openssh</a>
-       <a class="post-category" href="../tags/linux.html">linux</a>
        <a class="post-category" href="../tags/kde.html">kde</a>
+       <a class="post-category" href="../tags/linux.html">linux</a>
+       <a class="post-category" href="../tags/openssh.html">openssh</a>
     </p>
 </header>
 
         <div class="post-description">
-            <p></p><div><p>I have read an article about SSH passphrases
+            <p></p>
+<div>
+<p>I have read an article about SSH passphrases
 (<a class="reference external" href="http://help.github.com/ssh-key-passphrases/">github:help</a>), but they only
 explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.</p>
 <p>This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
@@ -112,21 +115,18 @@ we use the key, KDE Wallet does the job. I assume you are using KDE.</p>
 <div class="section" id="create-script-file">
 <h2>2. Create script file</h2>
 <p>Create the file</p>
-<pre class="code bash literal-block">
-~/.kde/Autostart/ssh-add.sh
+<pre class="code bash"><a name="rest_code_d9ff6939ffc0489c81118ff6c62ad512-1"></a>~/.kde/Autostart/ssh-add.sh
 </pre>
 <p>On some distributions <cite>~/.kde4/Autostart/ssh-add.sh</cite></p>
 <p>And add this content</p>
-<pre class="code bash literal-block">
-<span class="c">#!/bin/sh
-</span><span class="nb">export </span><span class="nv">SSH_ASKPASS</span><span class="o">=</span>/usr/bin/ksshaskpass
-ssh-add &lt; /dev/null
+<pre class="code bash"><a name="rest_code_b908fba258ec4bbcbb343f2729eca506-1"></a><span class="c">#!/bin/sh</span>
+<a name="rest_code_b908fba258ec4bbcbb343f2729eca506-2"></a><span class="nb">export </span><span class="nv">SSH_ASKPASS</span><span class="o">=</span>/usr/bin/ksshaskpass
+<a name="rest_code_b908fba258ec4bbcbb343f2729eca506-3"></a>ssh-add &lt; /dev/null
 </pre>
 </div>
 <div class="section" id="make-it-executable">
 <h2>3. Make it executable</h2>
-<pre class="code bash literal-block">
-chmod +x ~/.kde/Autostart/ssh-add.sh
+<pre class="code bash"><a name="rest_code_416a2d0336e4441292fd298e3c128f30-1"></a>chmod +x ~/.kde/Autostart/ssh-add.sh
 </pre>
 <p>And run the script (or restart the session)</p>
 </div>
@@ -134,17 +134,16 @@ chmod +x ~/.kde/Autostart/ssh-add.sh
 <h2>Extra</h2>
 <p>For security reasons, is a good idea stop ssh-agent when you finish your
 session, create the file</p>
-<pre class="code bash literal-block">
-~/.kde/shutdown/ssh-agent.sh
+<pre class="code bash"><a name="rest_code_d761c367e52b4215b3785912831d269d-1"></a>~/.kde/shutdown/ssh-agent.sh
 </pre>
 <p>With this content</p>
-<pre class="code bash literal-block">
-<span class="c">#!/bin/sh
-</span>ssh-agent -k
+<pre class="code bash"><a name="rest_code_e303cf6ab19d4a3eb6cfaa75201d0f7b-1"></a><span class="c">#!/bin/sh</span>
+<a name="rest_code_e303cf6ab19d4a3eb6cfaa75201d0f7b-2"></a>ssh-agent -k
 </pre>
 <p>This file should be executable</p>
 <p>A good page for more info about SSH: <a class="reference external" href="https://wiki.archlinux.org/index.php/Secure_Shell">Secure Shell (Arch Linux)</a></p>
-</div></div>
+</div>
+</div>
         </div>
     </section>
 
@@ -160,7 +159,8 @@ session, create the file</p>
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 

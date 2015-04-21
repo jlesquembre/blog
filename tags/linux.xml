@@ -1,53 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Lafuente (linux)</title><link>http://lafuente.me/</link><description></description><atom:link href="http://lafuente.me/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 24 Apr 2014 20:47:29 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using the KDE Wallet to store ssh keys with passphrases</title><link>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</link><description>&lt;div&gt;&lt;p&gt;I have read an article about SSH passphrases
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Lafuente (linux)</title><link>http://lafuente.me/</link><description></description><atom:link rel="self" href="http://lafuente.me/tags/linux.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Apr 2015 12:05:58 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using the KDE Wallet to store ssh keys with passphrases</title><link>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;I have read an article about SSH passphrases
 (&lt;a class="reference external" href="http://help.github.com/ssh-key-passphrases/"&gt;github:help&lt;/a&gt;), but they only
 explain how to use ssh-agent with msysgit and Mac OSX, no word about Linux.&lt;/p&gt;
 &lt;p&gt;This guide is about how to use KDE Wallet with ssh-agent. This way, we can use
 SSH keys with passphrases, but we don't need to enter a passphrase every time
 we use the key, KDE Wallet does the job. I assume you are using KDE.&lt;/p&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><category>kde</category><guid>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</guid><pubDate>Fri, 09 Mar 2012 11:49:46 GMT</pubDate></item><item><title>Autofs configuration</title><link>http://lafuente.me/posts/autofs-configuration.html</link><description>&lt;div&gt;&lt;p&gt;Autofs uses &lt;cite&gt;/etc/autofs/auto.master&lt;/cite&gt; as its default primary configuration
+&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kde</category><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</guid><pubDate>Fri, 09 Mar 2012 11:49:46 GMT</pubDate></item><item><title>Autofs configuration</title><link>http://lafuente.me/posts/autofs-configuration.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;Autofs uses &lt;cite&gt;/etc/autofs/auto.master&lt;/cite&gt; as its default primary configuration
 file. We can define two kind of maps in this file, direct and indirect. An
 example:&lt;/p&gt;
-&lt;pre class="code text literal-block"&gt;
-# mount point   config file        options
-/-              /etc/autofs/auto.direct   --ghost
-/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
-/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
-+auto.master
-&lt;/pre&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/autofs-configuration.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>autofs</category><guid>http://lafuente.me/posts/autofs-configuration.html</guid><pubDate>Fri, 11 Mar 2011 00:00:00 GMT</pubDate></item><item><title>Using public keys with openSSH</title><link>http://lafuente.me/posts/using-public-keys-with-openssh.html</link><description>&lt;div&gt;&lt;img alt="/images/sshconnection.png" src="http://lafuente.me/images/sshconnection.png"&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-public-keys-with-openssh.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/using-public-keys-with-openssh.html</guid><pubDate>Thu, 27 Jan 2011 00:00:00 GMT</pubDate></item><item><title>File and directory permissions</title><link>http://lafuente.me/posts/file-and-directory-permissions.html</link><description>&lt;div&gt;&lt;p&gt;The best way to understand the Linux permissions, is with an example. If we run
+&lt;pre class="code text"&gt;&lt;a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-1"&gt;&lt;/a&gt;# mount point   config file        options
+&lt;a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-2"&gt;&lt;/a&gt;/-              /etc/autofs/auto.direct   --ghost
+&lt;a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-3"&gt;&lt;/a&gt;/media/cifs     /etc/autofs/auto.cifs     --timeout=60 --ghost
+&lt;a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-4"&gt;&lt;/a&gt;/media/sshfs    /etc/autofs/auto.sshfs    --timeout=60 --ghost
+&lt;a name="rest_code_fa4b6627f10541a2a864fe04dc50e803-5"&gt;&lt;/a&gt;+auto.master
+&lt;/pre&gt;&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/autofs-configuration.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>autofs</category><category>linux</category><guid>http://lafuente.me/posts/autofs-configuration.html</guid><pubDate>Fri, 11 Mar 2011 00:00:00 GMT</pubDate></item><item><title>Using public keys with openSSH</title><link>http://lafuente.me/posts/using-public-keys-with-openssh.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;img alt="/images/sshconnection.png" src="http://lafuente.me/images/sshconnection.png"&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/using-public-keys-with-openssh.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/using-public-keys-with-openssh.html</guid><pubDate>Thu, 27 Jan 2011 00:00:00 GMT</pubDate></item><item><title>File and directory permissions</title><link>http://lafuente.me/posts/file-and-directory-permissions.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;The best way to understand the Linux permissions, is with an example. If we run
 the command &lt;cite&gt;ls -l&lt;/cite&gt; we get an output like this:&lt;/p&gt;
-&lt;pre class="code text literal-block"&gt;
-1 2          3     4     5      6     7             8
-- rw-r-----  1     user  users     8  ene 24 11:01  f.txt
-d rwxr-xr-x  2     root  root   4096  ene 24 12:14  dir
-&lt;/pre&gt;
-&lt;p&gt;which maps to&lt;/p&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/file-and-directory-permissions.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><guid>http://lafuente.me/posts/file-and-directory-permissions.html</guid><pubDate>Mon, 24 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Load a kernel module</title><link>http://lafuente.me/posts/load-a-kernel-module.html</link><description>&lt;div&gt;&lt;p&gt;In Linux, to load a kernel module (for example, fuse) run:&lt;/p&gt;
-&lt;pre class="code bash literal-block"&gt;
-modprobe fuse
-&lt;/pre&gt;
-&lt;p&gt;You can verify that the module is loaded using the following command:&lt;/p&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/load-a-kernel-module.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kernel</category><category>linux</category><guid>http://lafuente.me/posts/load-a-kernel-module.html</guid><pubDate>Sat, 22 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Give sudo access to any user</title><link>http://lafuente.me/posts/give-sudo-access-to-any-user.html</link><description>&lt;div&gt;&lt;p&gt;Normally, after install the OS (Debian in my case), you don't have sudo access,
+&lt;pre class="code text"&gt;&lt;a name="rest_code_b1d830b85cd74ab792d5aa064c38ebdb-1"&gt;&lt;/a&gt;1 2          3     4     5      6     7             8
+&lt;a name="rest_code_b1d830b85cd74ab792d5aa064c38ebdb-2"&gt;&lt;/a&gt;- rw-r-----  1     user  users     8  ene 24 11:01  f.txt
+&lt;a name="rest_code_b1d830b85cd74ab792d5aa064c38ebdb-3"&gt;&lt;/a&gt;d rwxr-xr-x  2     root  root   4096  ene 24 12:14  dir
+&lt;/pre&gt;&lt;p&gt;which maps to&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/file-and-directory-permissions.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><guid>http://lafuente.me/posts/file-and-directory-permissions.html</guid><pubDate>Mon, 24 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Load a kernel module</title><link>http://lafuente.me/posts/load-a-kernel-module.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;In Linux, to load a kernel module (for example, fuse) run:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_e1e5bef8f08445689d9d011b184af119-1"&gt;&lt;/a&gt;modprobe fuse
+&lt;/pre&gt;&lt;p&gt;You can verify that the module is loaded using the following command:&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/load-a-kernel-module.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>kernel</category><category>linux</category><guid>http://lafuente.me/posts/load-a-kernel-module.html</guid><pubDate>Sat, 22 Jan 2011 00:00:00 GMT</pubDate></item><item><title>OpenSSH, remote host identification has changed</title><link>http://lafuente.me/posts/remote-host-authentication-changed.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;Sometimes when I run the ssh command I get this error:&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-1"&gt;&lt;/a&gt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-2"&gt;&lt;/a&gt;@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-3"&gt;&lt;/a&gt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-4"&gt;&lt;/a&gt;IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-5"&gt;&lt;/a&gt;Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-6"&gt;&lt;/a&gt;It is also possible that the RSA host key has just been changed.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-7"&gt;&lt;/a&gt;The fingerprint for the RSA key sent by the remote host is
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-8"&gt;&lt;/a&gt;xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-9"&gt;&lt;/a&gt;Please contact your system administrator.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-10"&gt;&lt;/a&gt;Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-11"&gt;&lt;/a&gt;Offending key in /home/user/.ssh/known_hosts:7
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-12"&gt;&lt;/a&gt;RSA host key for 192.168.1.5 has changed and you have requested strict checking.
+&lt;a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-13"&gt;&lt;/a&gt;Host key verification failed.
+&lt;/pre&gt;&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/remote-host-authentication-changed.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>openssh</category><guid>http://lafuente.me/posts/remote-host-authentication-changed.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item><item><title>Give sudo access to any user</title><link>http://lafuente.me/posts/give-sudo-access-to-any-user.html</link><dc:creator>José Luis Lafuente</dc:creator><description>&lt;div&gt;&lt;p&gt;Normally, after install the OS (Debian in my case), you don't have sudo access,
 and you can see this error:&lt;/p&gt;
-&lt;pre class="code text literal-block"&gt;
-user is not in the sudoers file. This incident will be reported.
-&lt;/pre&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/give-sudo-access-to-any-user.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>sudo</category><category>linux</category><guid>http://lafuente.me/posts/give-sudo-access-to-any-user.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item><item><title>OpenSSH, remote host identification has changed</title><link>http://lafuente.me/posts/remote-host-authentication-changed.html</link><description>&lt;div&gt;&lt;p&gt;Sometimes when I run the ssh command I get this error:&lt;/p&gt;
-&lt;pre class="code text literal-block"&gt;
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that the RSA host key has just been changed.
-The fingerprint for the RSA key sent by the remote host is
-xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
-Please contact your system administrator.
-Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
-Offending key in /home/user/.ssh/known_hosts:7
-RSA host key for 192.168.1.5 has changed and you have requested strict checking.
-Host key verification failed.
-&lt;/pre&gt;
-&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/remote-host-authentication-changed.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>openssh</category><category>linux</category><guid>http://lafuente.me/posts/remote-host-authentication-changed.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>
+&lt;pre class="code text"&gt;&lt;a name="rest_code_09983003d42849bdba1f4eb27b141443-1"&gt;&lt;/a&gt;user is not in the sudoers file. This incident will be reported.
+&lt;/pre&gt;&lt;p class="more"&gt;&lt;a href="http://lafuente.me/posts/give-sudo-access-to-any-user.html"&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>sudo</category><guid>http://lafuente.me/posts/give-sudo-access-to-any-user.html</guid><pubDate>Tue, 18 Jan 2011 00:00:00 GMT</pubDate></item></channel></rss>

@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,37 +91,40 @@
 
     <p class="post-meta">
        2011-01-18 ·
-       <a class="post-category" href="../tags/openssh.html">openssh</a>
        <a class="post-category" href="../tags/linux.html">linux</a>
+       <a class="post-category" href="../tags/openssh.html">openssh</a>
     </p>
 </header>
 
         <div class="post-description">
-            <p></p><div><p>Sometimes when I run the ssh command I get this error:</p>
-<pre class="code text literal-block">
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that the RSA host key has just been changed.
-The fingerprint for the RSA key sent by the remote host is
-xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
-Please contact your system administrator.
-Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
-Offending key in /home/user/.ssh/known_hosts:7
-RSA host key for 192.168.1.5 has changed and you have requested strict checking.
-Host key verification failed.
+            <p></p>
+<div>
+<p>Sometimes when I run the ssh command I get this error:</p>
+<pre class="code text"><a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-1"></a>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-2"></a>@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-3"></a>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-4"></a>IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-5"></a>Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-6"></a>It is also possible that the RSA host key has just been changed.
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-7"></a>The fingerprint for the RSA key sent by the remote host is
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-8"></a>xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-9"></a>Please contact your system administrator.
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-10"></a>Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-11"></a>Offending key in /home/user/.ssh/known_hosts:7
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-12"></a>RSA host key for 192.168.1.5 has changed and you have requested strict checking.
+<a name="rest_code_ffc52ffbd9404a669e3446e710b4a544-13"></a>Host key verification failed.
 </pre>
 <!-- TEASER_END: -->
 <p>This usually happens when I change any machine in my network.
 The best way to solve this problem is removing all keys belonging to hostname
 from known_hosts file. In my case, the remote host is 192.168.1.5, so I run the
 command:</p>
-<pre class="code sh literal-block">
-ssh-keygen -R 192.168.1.5
+<pre class="code sh"><a name="rest_code_0f17e96d424d454e8cae916f4a1b5862-1"></a>ssh-keygen -R 192.168.1.5
 </pre>
-<p>And now I can access again to the remote host.</p></div>
+<p>And now I can access again to the remote host.</p>
+<p>An alternative is to set <cite>StrictHostKeyChecking</cite> to <cite>no</cite> in your ssh_config.
+For a better description, take a look to the end of <a class="reference external" href="http://blogs.atlassian.com/2011/05/advanced_ssh_for_developers/">this article</a>.</p>
+</div>
         </div>
     </section>
 
@@ -136,7 +140,8 @@ ssh-keygen -R 192.168.1.5
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 

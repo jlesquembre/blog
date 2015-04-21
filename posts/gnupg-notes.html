@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,25 +96,24 @@
 </header>
 
         <div class="post-description">
-            <p></p><div><div class="section" id="create-new-key">
+            <p></p>
+<div>
+<div class="section" id="create-new-key">
 <h2>Create new key</h2>
 <p>Create or edit the file <cite>~/.gnupg/gpg.conf</cite> and add the following lines to use
 the cryptographically stronger SHA512 hashing algorithm for signatures in
 preference to SHA1 algorithm.</p>
-<pre class="code text literal-block">
-personal-digest-preferences SHA512
-cert-digest-algo SHA512
-default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+<pre class="code text"><a name="rest_code_6758e116826046ada140c894bed3a72a-1"></a>personal-digest-preferences SHA512
+<a name="rest_code_6758e116826046ada140c894bed3a72a-2"></a>cert-digest-algo SHA512
+<a name="rest_code_6758e116826046ada140c894bed3a72a-3"></a>default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
 </pre>
 <p>Now we can generate the keys:</p>
-<pre class="code bash literal-block">
-gpg --gen-key
+<pre class="code bash"><a name="rest_code_7e01b5a7e0694c94bf55ba052665776e-1"></a>gpg --gen-key
 </pre>
 <p>The system will prompt us to generate some entropy, we can just run this in
 other terminal. Any expensive operation over the file system, like <cite>find</cite>
 would we also ok.</p>
-<pre class="code bash literal-block">
-ls -R ~
+<pre class="code bash"><a name="rest_code_538057e0311b4d8eb42b82c8517f9b31-1"></a>ls -R ~
 </pre>
 <!-- TEASER_END: -->
 <p>By default we have one master key (for signing) and one subkey (for encryption)</p>
@@ -121,25 +121,21 @@ ls -R ~
 <div class="section" id="list-keys">
 <h2>List keys</h2>
 <p>We can see our public keys with this command:</p>
-<pre class="code bash literal-block">
-gpg --list-keys
+<pre class="code bash"><a name="rest_code_62b273df80644245a9dd0c5ea633d871-1"></a>gpg --list-keys
 </pre>
 <p>And our secret keys with this command:</p>
-<pre class="code bash literal-block">
-gpg --list-secret-keys
+<pre class="code bash"><a name="rest_code_dd1ccd10b5e24abea4dc27be1431bac3-1"></a>gpg --list-secret-keys
 </pre>
 <p>To see more information about the keys, we can use this command:</p>
-<pre class="code bash literal-block">
-gpg --edit-key KEYID_or_EMAIL
+<pre class="code bash"><a name="rest_code_30d31c63bbed4435bdd60a6a505bcc0c-1"></a>gpg --edit-key KEYID_or_EMAIL
 </pre>
 <p>The output is something like this:</p>
-<pre class="code bash literal-block">
-Secret key is available.
-
-pub  4096R/AB58430D  created: 2014-04-14  expires: never       usage: SC
-                     trust: ultimate      validity: ultimate
-sub  4096R/D5293C21  created: 2014-04-14  expires: never       usage: E
-<span class="o">[</span>ultimate<span class="o">]</span> <span class="o">(</span>1<span class="o">)</span>. John Doe &lt;jonh@gmail.com&gt;
+<pre class="code bash"><a name="rest_code_15e86bb1ba0b4109abf35c1ba03dacd0-1"></a>Secret key is available.
+<a name="rest_code_15e86bb1ba0b4109abf35c1ba03dacd0-2"></a>
+<a name="rest_code_15e86bb1ba0b4109abf35c1ba03dacd0-3"></a>pub  4096R/AB58430D  created: 2014-04-14  expires: never       usage: SC
+<a name="rest_code_15e86bb1ba0b4109abf35c1ba03dacd0-4"></a>                     trust: ultimate      validity: ultimate
+<a name="rest_code_15e86bb1ba0b4109abf35c1ba03dacd0-5"></a>sub  4096R/D5293C21  created: 2014-04-14  expires: never       usage: E
+<a name="rest_code_15e86bb1ba0b4109abf35c1ba03dacd0-6"></a><span class="o">[</span>ultimate<span class="o">]</span> <span class="o">(</span>1<span class="o">)</span>. John Doe &lt;jonh@gmail.com&gt;
 </pre>
 <p>Meaning of the usage field abbreviation:</p>
 <table border="1" class="docutils">
@@ -148,21 +144,26 @@ sub  4096R/D5293C21  created: 2014-04-14  expires: never       usage: E
 <col width="37%">
 </colgroup>
 <thead valign="bottom">
-<tr><th class="head">Constant</th>
+<tr>
+<th class="head">Constant</th>
 <th class="head">Character</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr><td>PUBKEY_USAGE_SIG</td>
+<tr>
+<td>PUBKEY_USAGE_SIG</td>
 <td>S</td>
 </tr>
-<tr><td>PUBKEY_USAGE_CERT</td>
+<tr>
+<td>PUBKEY_USAGE_CERT</td>
 <td>C</td>
 </tr>
-<tr><td>PUBKEY_USAGE_ENC</td>
+<tr>
+<td>PUBKEY_USAGE_ENC</td>
 <td>E</td>
 </tr>
-<tr><td>PUBKEY_USAGE_AUTH</td>
+<tr>
+<td>PUBKEY_USAGE_AUTH</td>
 <td>A</td>
 </tr>
 </tbody>
@@ -176,17 +177,14 @@ indicated by an asterisk</p>
 <h2>User id management</h2>
 <p>Use the <cite>gpg ‐‐edit-key</cite> command to launch the <cite>gpg&gt;</cite> prompt.</p>
 <p>Select a uid:</p>
-<pre class="code bash literal-block">
-gpg&gt; uid n
+<pre class="code bash"><a name="rest_code_8f3cd88d367c40ce85638ec8fafd3824-1"></a>gpg&gt; uid n
 </pre>
 <p><cite>n</cite> is the uid number. Use * to select all and 0 to deselect all.</p>
 <p>Add a uid:</p>
-<pre class="code bash literal-block">
-gpg&gt; adduid
+<pre class="code bash"><a name="rest_code_b937d5d881d042988fada79d6b010abb-1"></a>gpg&gt; adduid
 </pre>
 <p>Make uid primary, before you need to select a uid:</p>
-<pre class="code bash literal-block">
-gpg&gt; primary
+<pre class="code bash"><a name="rest_code_d5bc58610d0741ffb9e829d7fa07b4e4-1"></a>gpg&gt; primary
 </pre>
 </div>
 <div class="section" id="create-subkey">
@@ -196,20 +194,18 @@ private key from your computer, and instead use a second generated subkey for
 signing files. You can sign and encrypt files as normal with your signing
 subkey and encryption subkey. If those keys ever get compromised, you can
 simply revoke them and generate new ones with your uncompromised master key.</p>
-<pre class="code bash literal-block">
-gpg --edit-key KEYID_or_EMAIL
-
-gpg&gt; addkey
-.
-.
-.
-gpg&gt; save
+<pre class="code bash"><a name="rest_code_d7bb07e98e3949ee86262ebddb87024d-1"></a>gpg --edit-key KEYID_or_EMAIL
+<a name="rest_code_d7bb07e98e3949ee86262ebddb87024d-2"></a>
+<a name="rest_code_d7bb07e98e3949ee86262ebddb87024d-3"></a>gpg&gt; addkey
+<a name="rest_code_d7bb07e98e3949ee86262ebddb87024d-4"></a>.
+<a name="rest_code_d7bb07e98e3949ee86262ebddb87024d-5"></a>.
+<a name="rest_code_d7bb07e98e3949ee86262ebddb87024d-6"></a>.
+<a name="rest_code_d7bb07e98e3949ee86262ebddb87024d-7"></a>gpg&gt; save
 </pre>
 </div>
 <div class="section" id="export-keys">
 <h2>Export keys</h2>
-<pre class="code bash literal-block">
-gpg --armor --export KEYID_or_EMAIL &gt; keyname.public.asc
+<pre class="code bash"><a name="rest_code_893853324057473a83d8c1550cefc184-1"></a>gpg --armor --export KEYID_or_EMAIL &gt; keyname.public.asc
 </pre>
 <p><cite>--armor</cite> exports the key in ascii format.
 Is also posible use <cite>--export-secret-key</cite> or <cite>--export-secret-subkeys</cite></p>
@@ -220,8 +216,7 @@ id, for example, is stored on the main key.</p>
 </div>
 <div class="section" id="import-subkeys">
 <h2>Import subkeys</h2>
-<pre class="code bash literal-block">
-gpg --import subkey.asc
+<pre class="code bash"><a name="rest_code_fe5e98e1b23f464b8c76c62094b6f1a3-1"></a>gpg --import subkey.asc
 </pre>
 <p>It is not possible to delete only the secret master key.
 If you want to delete only the master secret key, you need to follow this steps:</p>
@@ -229,29 +224,26 @@ If you want to delete only the master secret key, you need to follow this steps:
 <li>Export secret subkeys</li>
 <li>Delete secret key</li>
 </ul>
-<pre class="code bash literal-block">
-gpg --delete-secret-key KEYID_or_EMAIL
+<pre class="code bash"><a name="rest_code_00c8e30680a7427a8879b20b6649ccba-1"></a>gpg --delete-secret-key KEYID_or_EMAIL
 </pre>
 <ul class="simple">
 <li>Import secret subkeys</li>
 </ul>
 <p>You can verify it worked by running:</p>
-<pre class="code bash literal-block">
-gpg --list-secret-keys
-
-/home/john/.gnupg/secring.gpg
------------------------------
-sec#  4096R/AB58430D 2014-04-14
-uid                  John Doe &lt;jonh@gmail.com&gt;
-ssb   4096R/D5293C21 2014-04-14
+<pre class="code bash"><a name="rest_code_1c957576edc04760819dad53fee7d209-1"></a>gpg --list-secret-keys
+<a name="rest_code_1c957576edc04760819dad53fee7d209-2"></a>
+<a name="rest_code_1c957576edc04760819dad53fee7d209-3"></a>/home/john/.gnupg/secring.gpg
+<a name="rest_code_1c957576edc04760819dad53fee7d209-4"></a>-----------------------------
+<a name="rest_code_1c957576edc04760819dad53fee7d209-5"></a>sec#  4096R/AB58430D 2014-04-14
+<a name="rest_code_1c957576edc04760819dad53fee7d209-6"></a>uid                  John Doe &lt;jonh@gmail.com&gt;
+<a name="rest_code_1c957576edc04760819dad53fee7d209-7"></a>ssb   4096R/D5293C21 2014-04-14
 </pre>
 <p>The pound sign <cite>#</cite> means the signing subkey is not in the keypair located in
 the keyring.</p>
 </div>
 <div class="section" id="encrypting-a-file">
 <h2>Encrypting a file</h2>
-<pre class="code bash literal-block">
-gpg --recipient MY_KEY --recipient OTHER_KEY --encrypt message.txt
+<pre class="code bash"><a name="rest_code_75600a4546384e67868537d4628c99c6-1"></a>gpg --recipient MY_KEY --recipient OTHER_KEY --encrypt message.txt
 </pre>
 <p>The encrypted message is written to  <cite>message.txt.gpg</cite></p>
 <p>I wanted to make sure I could read the message too, for this reason I have two recipents.</p>
@@ -261,7 +253,8 @@ gpg --recipient MY_KEY --recipient OTHER_KEY --encrypt message.txt
 <p><a class="reference external" href="https://alexcabal.com/creating-the-perfect-gpg-keypair/">https://alexcabal.com/creating-the-perfect-gpg-keypair/</a></p>
 <p><a class="reference external" href="http://unix.stackexchange.com/questions/31996/how-are-the-gpg-usage-flags-defined-in-the-key-details-listing">http://unix.stackexchange.com/questions/31996/how-are-the-gpg-usage-flags-defined-in-the-key-details-listing</a></p>
 </div>
-</div></div>
+</div>
+</div>
         </div>
     </section>
 
@@ -277,7 +270,8 @@ gpg --recipient MY_KEY --recipient OTHER_KEY --encrypt message.txt
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 

@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,25 +96,26 @@
 </header>
 
         <div class="post-description">
-            <p></p><div><p>The best way to understand the Linux permissions, is with an example. If we run
+            <p></p>
+<div>
+<p>The best way to understand the Linux permissions, is with an example. If we run
 the command <cite>ls -l</cite> we get an output like this:</p>
-<pre class="code text literal-block">
-1 2          3     4     5      6     7             8
-- rw-r-----  1     user  users     8  ene 24 11:01  f.txt
-d rwxr-xr-x  2     root  root   4096  ene 24 12:14  dir
+<pre class="code text"><a name="rest_code_b1d830b85cd74ab792d5aa064c38ebdb-1"></a>1 2          3     4     5      6     7             8
+<a name="rest_code_b1d830b85cd74ab792d5aa064c38ebdb-2"></a>- rw-r-----  1     user  users     8  ene 24 11:01  f.txt
+<a name="rest_code_b1d830b85cd74ab792d5aa064c38ebdb-3"></a>d rwxr-xr-x  2     root  root   4096  ene 24 12:14  dir
 </pre>
 <p>which maps to</p>
 <!-- TEASER_END: -->
-<pre class="code text literal-block">
-1 2          3     4     5      6     7             8
-d uuugggooo  links owner group  size  date          name
+<pre class="code text"><a name="rest_code_2426298f4e2b4f3a94ba615ff14106af-1"></a>1 2          3     4     5      6     7             8
+<a name="rest_code_2426298f4e2b4f3a94ba615ff14106af-2"></a>d uuugggooo  links owner group  size  date          name
 </pre>
 <p>Numbers from 1 to 8 are not really in the output, but are here to clarify every field.</p>
 <ol class="arabic simple">
 <li>First character specifies the type of the file. In the example above the
 hyphen (<cite>-</cite>) in the first character indicates that this is a normal file, and
 the <cite>d</cite> indicates that this other file is a directory. <a class="reference external" href="http://en.wikipedia.org/wiki/Unix_file_types">List with all file
-types</a></li>
+types</a>
+</li>
 <li>Next 9 characters specifies the files permission. Each 3 characters refers
 to the read, write and execute permissions for user, group and others. In
 this example, <cite>rw-r-----</cite> indicates read-write permission for user, read
@@ -134,21 +136,25 @@ permission for group, and no permission for others.</li>
 <col width="46%">
 </colgroup>
 <thead valign="bottom">
-<tr><th class="head"> </th>
+<tr>
+<th class="head"> </th>
 <th class="head"><em>File</em></th>
 <th class="head"><em>Folder</em></th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr><td><em>Read</em></td>
+<tr>
+<td><em>Read</em></td>
 <td>File contents can be read</td>
 <td>Directory listing can be obtained</td>
 </tr>
-<tr><td><em>Write</em></td>
+<tr>
+<td><em>Write</em></td>
 <td>File contents can be changed</td>
 <td>Directory content can be changed</td>
 </tr>
-<tr><td><em>Execute</em></td>
+<tr>
+<td><em>Execute</em></td>
 <td>File can be executed</td>
 <td>Directory can be accessed</td>
 </tr>
@@ -156,11 +162,10 @@ permission for group, and no permission for others.</li>
 </table>
 <p>Remember, give execute permission to a folder if you want to access it.</p>
 <p>Instead of use the values <cite>r</cite>, <cite>w</cite> and <cite>x</cite>, you can use numeric values, where</p>
-<pre class="code text literal-block">
-r = 4
-w = 2
-x = 1
-- = 0
+<pre class="code text"><a name="rest_code_2bf0abf7549749eba1861bf61649cb18-1"></a>r = 4
+<a name="rest_code_2bf0abf7549749eba1861bf61649cb18-2"></a>w = 2
+<a name="rest_code_2bf0abf7549749eba1861bf61649cb18-3"></a>x = 1
+<a name="rest_code_2bf0abf7549749eba1861bf61649cb18-4"></a>- = 0
 </pre>
 <p>It is possible combine this values, a table with all the possibilities:</p>
 <table border="1" class="docutils">
@@ -170,83 +175,86 @@ x = 1
 <col width="61%">
 </colgroup>
 <thead valign="bottom">
-<tr><th class="head">Value</th>
+<tr>
+<th class="head">Value</th>
 <th class="head">Text equivalent</th>
 <th class="head">Meaning</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr><td>0</td>
+<tr>
+<td>0</td>
 <td>---</td>
 <td>All types of access are denied</td>
 </tr>
-<tr><td>1</td>
+<tr>
+<td>1</td>
 <td>--x</td>
 <td>Execute access is allowed</td>
 </tr>
-<tr><td>2</td>
+<tr>
+<td>2</td>
 <td>-w-</td>
 <td>Write access is allowed</td>
 </tr>
-<tr><td>3</td>
+<tr>
+<td>3</td>
 <td>-wx</td>
 <td>Write and execute access are allowed</td>
 </tr>
-<tr><td>4</td>
+<tr>
+<td>4</td>
 <td>r--</td>
 <td>Read access is allowed</td>
 </tr>
-<tr><td>5</td>
+<tr>
+<td>5</td>
 <td>r-x</td>
 <td>Read and execute access are allowed</td>
 </tr>
-<tr><td>6</td>
+<tr>
+<td>6</td>
 <td>rw-</td>
 <td>Read and write access are allowed</td>
 </tr>
-<tr><td>7</td>
+<tr>
+<td>7</td>
 <td>rwx</td>
 <td>Everything is allowed</td>
 </tr>
 </tbody>
 </table>
 <p>To change the permissions you can use the command <cite>chmod</cite>, which has this syntax:</p>
-<pre class="code text literal-block">
-chmod [options] MODE FILE
+<pre class="code text"><a name="rest_code_919af1efc6e74416835dd86e17cb7e3b-1"></a>chmod [options] MODE FILE
 </pre>
 <p>Let's see some examples, to give read and write access to everyone, you can use this two equivalent commands:</p>
-<pre class="code text literal-block">
-chmod a=rw file.txt
-chmod 666 file.txt
+<pre class="code text"><a name="rest_code_26d8474313964a0b9ba1ba6e4a08eed6-1"></a>chmod a=rw file.txt
+<a name="rest_code_26d8474313964a0b9ba1ba6e4a08eed6-2"></a>chmod 666 file.txt
 </pre>
 <p>To give read and write access to user and group, but no access to others, you can use this two equivalent commands:</p>
-<pre class="code text literal-block">
-chmod u=rw,g=rw,o= file.txt
-chmod 660 file.txt
+<pre class="code text"><a name="rest_code_b0c731585ef5456b9456cc7329be3ed5-1"></a>chmod u=rw,g=rw,o= file.txt
+<a name="rest_code_b0c731585ef5456b9456cc7329be3ed5-2"></a>chmod 660 file.txt
 </pre>
 <p>If you want to change the access permissions of a folder recursively never use
 the -R option. Chmod doesn't differentiate between folders and files, and this
 is really important, because execution access has different meanings for files
 and folders. Instead use this:</p>
 <p>For directories:</p>
-<pre class="code bash literal-block">
-find . -type d -exec chmod 755 <span class="o">{}</span> <span class="se">\;</span>
+<pre class="code bash"><a name="rest_code_cf27dc05b72146fc99e0855014749a32-1"></a>find . -type d -exec chmod <span class="m">755</span> <span class="o">{}</span> <span class="se">\;</span>
 </pre>
 <p>For files:</p>
-<pre class="code bash literal-block">
-find . -type f -exec chmod 644 <span class="o">{}</span> <span class="se">\;</span>
+<pre class="code bash"><a name="rest_code_05dff5d46e6c4048ad49e1c376aff3e1-1"></a>find . -type f -exec chmod <span class="m">644</span> <span class="o">{}</span> <span class="se">\;</span>
 </pre>
 <p>To finish, if you want to change the file owner, you can use the command chown,
 with this syntax:</p>
-<pre class="code text literal-block">
-chown [options] OWNER[:GROUP] file.txt
+<pre class="code text"><a name="rest_code_fb2e3ecc73d348c4aa33f112d696d873-1"></a>chown [options] OWNER[:GROUP] file.txt
 </pre>
 <p>For example:</p>
-<pre class="code bash literal-block">
-chown user1 file.txt
+<pre class="code bash"><a name="rest_code_5b8b599020834725bf45d65045144f2c-1"></a>chown user1 file.txt
 </pre>
 <p>To change the owner recursively, use the option -R
-If you just want to change the group, use the command chgrp.</p></div>
+If you just want to change the group, use the command chgrp.</p>
+</div>
         </div>
     </section>
 
@@ -262,7 +270,8 @@ If you just want to change the group, use the command chgrp.</p></div>
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
