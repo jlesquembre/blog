@@ -19,3 +19,19 @@ To check all available commands::
 
     nikola help
 
+Dependencies::
+
+    compass
+    npm
+
+
+Install compass::
+
+    gem install compass scut bourbon
+    gem install --pre sass-css-importer
+
+
+Install node dependencies::
+
+    cd themes/lafuente
+    npm install
