@@ -1,0 +1,15 @@
+{
+  "title": "Lafuente",
+  "url": "https://www.lafuente.me/",
+  "description": "I am writing about my experiences as a software developer.",
+  "feed": {
+    "description": "I am writing about my experiences as a software developer.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://www.lafuente.me/"
+  },
+  "author": {
+    "name": "José Luis Lafuente",
+    "email": "jl@lafuente.me"
+  }
+}

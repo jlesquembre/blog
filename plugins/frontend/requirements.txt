@@ -1,4 +1,0 @@
-Nikola
-doit
-logbook
-sarge

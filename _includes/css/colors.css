@@ -1,0 +1,14 @@
+:root {
+  --bg: #fafafa;
+  --fg: #6c7680;
+  --ui: #959da6;
+  --text: #000000;
+  --tag: #399ee6;
+  --link: #399ee6;
+
+  --side-bg: #1f2430;
+  --side-fg: #cbccc6;
+  --side-ui: #707a8c;
+
+  --bg-m: #1f2430;
+}

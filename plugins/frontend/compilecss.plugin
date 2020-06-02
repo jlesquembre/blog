@@ -1,4 +1,0 @@
-[Core]
-Name = compilecss
-Module = compilecss
-Tests = test_compilecss
