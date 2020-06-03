@@ -120,6 +120,37 @@ gpg> addkey
 gpg> save
 ```
 
+## Create subkey for SSH authentication
+
+You need to create a subkey for authentication. To do this, you need to run gpg
+in expert mode:
+
+```
+gpg --expert --edit-key KEYID_or_EMAIL
+
+gpg> addkey
+
+# Select (11) ECC (set your own capabilities)
+# Select (1) Curve 25519
+# Select successively (S), (E), and (A) to remove the signing and encryption capabilities and enable the authentication capability.
+
+gpg> save
+```
+
+To export your public ssh key:
+
+```bash
+gpg --export-ssh-key KEYID_or_EMAIL
+```
+
+To make gnupg use your authentication key for ssh:
+
+```bash
+gpg --with-keygrip --list-public-keys KEYID_or_EMAIL
+```
+
+And add the keygrip for the authentication key to `~/.gnupg/sshcontrol`
+
 ## Export keys
 
 ```bash
