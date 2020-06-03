@@ -17,7 +17,7 @@ jobs:
           node-version: "12.x"
 
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -33,4 +33,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_output
           publish_branch: gh-pages
-          cname: lafuente.me
+          cname: www.lafuente.me
