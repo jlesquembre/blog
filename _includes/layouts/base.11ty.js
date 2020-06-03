@@ -91,7 +91,7 @@ module.exports = class extends Render {
         <body>
           ${process.env.DEV
             ? html`<a href="/page-list" id="all-pages">All pages</a>`
-            : null}
+            : ""}
           <header class="side">
             <a href="/">
               <h1 class="title">
