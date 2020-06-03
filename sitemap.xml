@@ -1,111 +1,103 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
- <url>
-  <loc>http://lafuente.me/about.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/archive.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/galleries/demo/index.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/galleries/index.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/index-1.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/index.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/listings/hello.py.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/listings/index.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/arch-linux-quick-installation-guide.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/autofs-configuration.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/file-and-directory-permissions.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/give-sudo-access-to-any-user.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/gnupg-notes.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/load-a-kernel-module.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/remote-host-authentication-changed.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/using-public-keys-with-openssh.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/archlinux.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/autofs.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/gnupg.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/index.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/kde.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/kernel.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/linux.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/openssh.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
- <url>
-  <loc>http://lafuente.me/tags/sudo.html</loc>
-  <lastmod>2015-04-21</lastmod>
- </url>
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://lafuente.me/posts/give-sudo-access-to-any-user</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/remote-host-authentication-changed</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/load-a-kernel-module</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/file-and-directory-permissions</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/using-public-keys-with-openssh</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/autofs-configuration</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/using-the-kde-wallet-to-store-ssh-keys-with-passphrases</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/arch-linux-quick-installation-guide</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts/gnupg-notes</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/404.html</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/about</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/posts</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/feed/feed.xml</loc>
+<lastmod>Invalid DateTime</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/page-list</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/sitemap.xml</loc>
+<lastmod>Invalid DateTime</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/archlinux</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/autofs</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/gnupg</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/kde</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/kernel</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/linux</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/openssh</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
+<url>
+<loc>https://lafuente.me/tags/sudo</loc>
+<lastmod>2020-06-03</lastmod>
+</url>
 </urlset>
