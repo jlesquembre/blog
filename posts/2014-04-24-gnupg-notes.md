@@ -66,11 +66,11 @@ sub  4096R/D5293C21  created: 2014-04-14  expires: never       usage: E
 Meaning of the usage field abbreviation:
 
 | Constant          | Character |
-| ----------------- | --------- |
-| PUBKEY_USAGE_SIG  | S         |
-| PUBKEY_USAGE_CERT | C         |
-| PUBKEY_USAGE_ENC  | E         |
-| PUBKEY_USAGE_AUTH | A         |
+| ----------------- | :-------: |
+| PUBKEY_USAGE_SIG  |     S     |
+| PUBKEY_USAGE_CERT |     C     |
+| PUBKEY_USAGE_ENC  |     E     |
+| PUBKEY_USAGE_AUTH |     A     |
 
 Thus, for example, usage: SCA means that the sub-key can be used for signing,
 for creating a certificate and authentication purposes.

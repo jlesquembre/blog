@@ -225,3 +225,35 @@ a.social-icon {
   color: red;
   right: 0;
 }
+
+hr {
+  height: 1px;
+  width: 3em;
+}
+
+thead tr {
+  background-color: var(--ui);
+}
+tbody tr:nth-child(2n) {
+  background-color: #dbdbdb;
+}
+th,
+td {
+  padding: 0 1em;
+}
+th[align="right"],
+td[align="right"] {
+  text-align: right;
+}
+
+table {
+  border: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.8125rem;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  border-collapse: collapse;
+  /* width: 100%; */
+}
