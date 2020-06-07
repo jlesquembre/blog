@@ -11,6 +11,14 @@
 <email>jl@lafuente.me</email>
 </author>
 <entry>
+<title>Eleventy migration</title>
+<link href="https://lafuente.me/posts/eleventy-migration"/>
+<updated>2020-06-07T00:00:00-00:00</updated>
+<id>https://lafuente.me/posts/eleventy-migration</id>
+<content type="html">&lt;p&gt;After 6 years from my &lt;a href=&quot;/posts/gnupg-notes&quot;&gt;last post entry&lt;/a&gt;, I&#x27;m migrating my personal blog to &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;I heard good things about it and I wanted to give it a try. So far I&#x27;m liking it a lot, the best part about &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; is its flexibility. As an example, I started writing my templates in &lt;a href=&quot;https://mozilla.github.io/nunjucks/&quot;&gt;Nunjucks&lt;/a&gt;, but since I didn&#x27;t like the syntax too much, I decided to write the templates just with &lt;a href=&quot;https://www.11ty.dev/docs/languages/javascript/&quot;&gt;JavaScript&lt;/a&gt;. It was an improvement, but I was missing some of the functionality provided by &lt;a href=&quot;https://lit-html.polymer-project.org/&quot;&gt;lit-html&lt;/a&gt;. I found a project to render &lt;a href=&quot;https://lit-html.polymer-project.org/&quot;&gt;lit-html&lt;/a&gt; templates on the server, &lt;a href=&quot;https://github.com/popeindustries/lit-html-server&quot;&gt;lit-html-server&lt;/a&gt;, and it was incredibly easy to plug it into &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; and start to use &lt;a href=&quot;https://lit-html.polymer-project.org/&quot;&gt;lit-html&lt;/a&gt; templates on my static site.&lt;/p&gt; &lt;p&gt;Now I write the posts in Markdown, which are rendered with &lt;a href=&quot;https://github.com/markdown-it/markdown-it&quot;&gt;markdown-it&lt;/a&gt;, and the result is passed to the templates to render the final html with &lt;a href=&quot;https://github.com/popeindustries/lit-html-server&quot;&gt;lit-html-server&lt;/a&gt;&lt;/p&gt; &lt;p&gt;I&#x27;ll also try to write regularly. I liked the idea from &lt;a href=&quot;https://lambdaisland.com/blog/2019-11-25-advent-of-parens&quot;&gt;Lambda Island: Advent of Parens&lt;/a&gt;, where the author challenged himself to write a blog post for every day of December until the 24th. While I&#x27;m not writing a new post every day, I like the idea of writing smaller posts, but more often. Let&#x27;s see how it goes.&lt;/p&gt;
+</content>
+</entry>
+<entry>
 <title>GnuPG Notes</title>
 <link href="https://lafuente.me/posts/gnupg-notes"/>
 <updated>2014-04-24T00:00:00-00:00</updated>
