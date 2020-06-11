@@ -11,6 +11,14 @@
 <email>jl@lafuente.me</email>
 </author>
 <entry>
+<title>GitHub actions with Docker and Nix</title>
+<link href="https://lafuente.me/posts/github-actions-docker-nix"/>
+<updated>2020-06-11T00:00:00-00:00</updated>
+<id>https://lafuente.me/posts/github-actions-docker-nix</id>
+<content type="html">&lt;p&gt;I created my first GitHub action: &lt;a href=&quot;https://github.com/jlesquembre/clojars-publish-action&quot;&gt;clojars publish action&lt;/a&gt;. For it, I created a Docker image. At first, I went to Docker hub and looked for the clojure images, but I realized that I also needed to install maven. There is also a Maven image, but since I need maven &lt;strong&gt;and&lt;/strong&gt; clojure on the container, the only option was to create my own image based on the official ones and install the other dependency manually.&lt;/p&gt; &lt;p&gt;Then, I remembered about an interesting project I hear about, &lt;a href=&quot;https://nixery.dev/&quot;&gt;Nixery&lt;/a&gt;. With it, you can create Docker images based on &lt;a href=&quot;https://nixos.org/&quot;&gt;NixOS&lt;/a&gt;, and it makes really easy to install dependecies. In my case, I just needed this:&lt;/p&gt; &lt;pre class=&quot;language-dockerfile&quot;&gt;&lt;code class=&quot;language-dockerfile&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; nixery.dev/shell/maven/clojure&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Done, you alredy have a container with some basic linux utilities, maven and clojure. If you need to install something else, just add &lt;code&gt;/other-dep&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Since I&#x27;m already a &lt;a href=&quot;https://nixos.org/&quot;&gt;NixOS&lt;/a&gt; user, it is a really good solution for me. It gives me an easy way to install dependecies, on the linux distribution I know the best.&lt;/p&gt;
+</content>
+</entry>
+<entry>
 <title>Eleventy migration</title>
 <link href="https://lafuente.me/posts/eleventy-migration"/>
 <updated>2020-06-07T00:00:00-00:00</updated>
