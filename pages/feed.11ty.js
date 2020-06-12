@@ -5,6 +5,8 @@ const { dateToISO } = require("../utils/date");
 const normalizeUrl = require("normalize-url");
 const { minify } = require("html-minifier");
 
+const { getTags } = require("../utils/utils");
+
 // Validate result here:
 // https://validator.w3.org/feed/
 
@@ -50,7 +52,9 @@ module.exports = class {
               <link href=${absolutePostUrl} />
               <updated>${dateToISO(post.date)}</updated>
               <id>${absolutePostUrl}</id>
-              ${post.data.tags.map((tag) => html`<category term="${tag}" />`)}
+              ${getTags(post.data.tags).map(
+                (tag) => html`<category term="${tag}" />`
+              )}
               <content type="html">${post.templateContent}</content>
             </entry>
           `;
