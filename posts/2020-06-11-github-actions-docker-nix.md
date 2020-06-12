@@ -6,15 +6,21 @@ tags:
   - automation
   - docker
   - nix
+  - clojure
 ---
 
 I created my first GitHub action:
 [clojars publish action](https://github.com/jlesquembre/clojars-publish-action).
-For it, I created a Docker image. At first, I went to Docker hub and looked for
-the clojure images, but I realized that I also needed to install maven. There is
-also a Maven image, but since I need maven **and** clojure on the container, the
-only option was to create my own image based on the official ones and install
-the other dependency manually.
+
+To see an example in action, you can go to
+[jlesquembre/dummy-clj](https://github.com/jlesquembre/dummy-clj) and take a
+look to the actions tab.
+
+GitHub actions can run in Docker containers, so I created a Docker image. At
+first, I went to Docker hub and looked for the clojure images, but I realized
+that I also needed to install maven. There is also a maven image, but since I
+need maven **and** clojure on the container, the only option was to create my
+own image based on the official ones and install the other dependency manually.
 
 Then, I remembered about an interesting project I hear about, [Nixery][]. With
 it, you can create Docker images based on [NixOS][], and it makes really easy to

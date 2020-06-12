@@ -14,7 +14,11 @@ module.exports = class {
   }
 
   async render({ metadata, collections }) {
-    const absUrl = (href) => normalizeUrl(`${metadata.url}/${href}`);
+    const absUrl = (href) =>
+      normalizeUrl(`${metadata.url}/${href}`, {
+        stripWWW: false,
+        forceHttps: true,
+      });
 
     let sitemap = html`<?xml version="1.0" encoding="utf-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

@@ -20,16 +20,20 @@ module.exports = class {
   }
 
   async render({ metadata, collections }) {
-    const absUrl = (href) => normalizeUrl(`${metadata.url}/${href}`);
+    const absUrl = (href) =>
+      normalizeUrl(`${metadata.url}/${href}`, {
+        stripWWW: false,
+        forceHttps: true,
+      });
 
-    const lastUpdate = dateToISO(_.last(collections.posts));
+    // const lastUpdate = dateToISO(_.last(collections.posts));
+    const lastUpdate = dateToISO(new Date());
 
     const posts = _.orderBy(collections.posts, ["date"], ["desc"]);
 
     let feed = html`<?xml version="1.0" encoding="utf-8"?>
       <feed xmlns="http://www.w3.org/2005/Atom">
         <title>${metadata.title}</title>
-        <subtitle>${metadata.subtitle}</subtitle>
         <link href=${absUrl(metadata.feed.path)} rel="self" />
         <link href=${metadata.url} />
         <updated>${lastUpdate}</updated>
@@ -46,6 +50,7 @@ module.exports = class {
               <link href=${absolutePostUrl} />
               <updated>${dateToISO(post.date)}</updated>
               <id>${absolutePostUrl}</id>
+              ${post.data.tags.map((tag) => `<category term="${tag}" />`)}
               <content type="html">${post.templateContent}</content>
             </entry>
           `;
