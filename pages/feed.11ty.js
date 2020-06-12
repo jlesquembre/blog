@@ -50,7 +50,7 @@ module.exports = class {
               <link href=${absolutePostUrl} />
               <updated>${dateToISO(post.date)}</updated>
               <id>${absolutePostUrl}</id>
-              ${post.data.tags.map((tag) => `<category term="${tag}" />`)}
+              ${post.data.tags.map((tag) => html`<category term="${tag}" />`)}
               <content type="html">${post.templateContent}</content>
             </entry>
           `;
