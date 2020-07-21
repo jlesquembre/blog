@@ -4,10 +4,10 @@ const { readableDate, htmlDateString } = require("../../utils/date");
 const { getHtmlTags, renderContent } = require("../../utils/utils");
 
 function summary(data) {
-  return html` <div>
+  return html` <div class="date-side">
       ${readableDate(data.page.date)}
     </div>
-    <h3>${data.title}</h3>
+    <h2>${data.title}</h2>
     <div class="tags-list tags-side">
       ${getHtmlTags(data.tags)}
     </div>`;

@@ -1,6 +1,17 @@
 * {
   box-sizing: border-box;
 }
+
+:root {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+.date-tags-container,
+.tags-side,
+.date-side {
+  font-size: 0.8rem;
+}
+
 html,
 body {
   padding: 0;
@@ -56,8 +67,12 @@ a:visited {
 
 main.blog p {
   margin: 1.5em 0;
-  font-size: 20px;
-  max-width: 700px;
+}
+
+main.blog p,
+main.blog li,
+hr {
+  max-width: 80ch;
 }
 
 main.blog a:not(.tag):not(.direct-link),
@@ -227,8 +242,7 @@ a.social-icon {
 }
 
 hr {
-  height: 1px;
-  width: 3em;
+  margin: 1em 0.5em;
 }
 
 thead tr {
