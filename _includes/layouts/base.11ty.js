@@ -23,6 +23,10 @@ function extraCss(...files) {
     .map((f) => html`<link rel="stylesheet" href="/css/${f}" />`);
 }
 
+function scriptTag(file) {
+  return html`<script type="module" src="/js-modules/${file}"></script>`;
+}
+
 module.exports = class extends Render {
   data() {
     return {
@@ -84,11 +88,7 @@ module.exports = class extends Render {
             type="application/atom+xml"
             title=${data.metadata.title}
           />
-          ${jsModules.map(
-            (file) =>
-              html`<script type="module" src="/js-modules/${file}"></script>
-                '`
-          )}
+          ${jsModules.map(scriptTag)}
           <style>
             ${unsafeHTML(css)}
           </style>

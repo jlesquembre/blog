@@ -88,6 +88,7 @@ module.exports = class BaseTemplate {
 ```
 
 You can see the real file here:
+[blog/base.11ty.js](https://github.com/jlesquembre/blog/blob/d1cbf61d5d1f37baaa686c063190b637efb95c6c/_includes/layouts/base.11ty.js)
 
 And now you can just write the html directly on your markdown files:
 
