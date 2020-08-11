@@ -24,6 +24,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "_includes/img": "images",
+    "_includes/models": "models",
+  });
+
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@google/model-viewer/dist/model-viewer.min.js":
+      "js-modules/model-viewer.min.js",
   });
 
   /* Markdown Overrides */

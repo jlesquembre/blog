@@ -45,6 +45,7 @@ module.exports = class extends Render {
   }
 
   async _render(data) {
+    const jsModules = data.modules || [];
     const navClasses = (url) => {
       return classMap({
         "nav-item": true,
@@ -83,6 +84,11 @@ module.exports = class extends Render {
             type="application/atom+xml"
             title=${data.metadata.title}
           />
+          ${jsModules.map(
+            (file) =>
+              html`<script type="module" src="/js-modules/${file}"></script>
+                '`
+          )}
           <style>
             ${unsafeHTML(css)}
           </style>
