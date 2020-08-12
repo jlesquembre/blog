@@ -111,6 +111,7 @@ module.exports = class extends Render {
                   class="social-icon icon-github"
                   href="https://github.com/jlesquembre"
                   title="@jlesquembre on GitHub"
+                  aria-label="jlesquembre on GitHub"
                 >
                   ${await minSvg(getContents("img/icons/github.svg"))}
                 </a>
@@ -118,6 +119,7 @@ module.exports = class extends Render {
                   class="social-icon icon-twitter"
                   href="https://twitter.com/jlesquembre"
                   title="@jlesquembre on Twitter"
+                  aria-label="jlesquembre on Twitter"
                 >
                   ${await minSvg(getContents("img/icons/twitter.svg"))}
                 </a>
@@ -125,6 +127,7 @@ module.exports = class extends Render {
                   class="social-icon icon-feed"
                   href=${data.metadata.feed.path}
                   title="José Luis Lafuente's RSS Feed"
+                  aria-label="José Luis Lafuente's RSS Feed"
                 >
                   ${await minSvg(getContents("img/icons/feed.svg"))}
                 </a>
