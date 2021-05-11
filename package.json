@@ -36,7 +36,7 @@
     "@google/model-viewer": "^1.1.0",
     "@popeindustries/lit-html-server": "^3.1.0",
     "compare-urls": "^2.0.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "normalize-url": "^5.1.0"
   }
 }
