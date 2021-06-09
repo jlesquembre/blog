@@ -37,6 +37,6 @@
     "@popeindustries/lit-html-server": "^3.1.0",
     "compare-urls": "^2.0.0",
     "lodash": "^4.17.19",
-    "normalize-url": "^5.1.0"
+    "normalize-url": "^5.3.1"
   }
 }
