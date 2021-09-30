@@ -4,7 +4,8 @@
 
 - `_includes`: 11ty layouts and other static content
 
-- `pages`: Main website pages, like index or about pages. Usually `.11ty.js` files
+- `pages`: Main website pages, like index or about pages. Usually `.11ty.js`
+  files
 
 - `posts`: Blog posts, usually `.md` files
 
@@ -15,6 +16,10 @@
 NOTES:
 
 - All file formats not recognized by Eleventy (defaults to
-  `html,liquid,ejs,md,hbs,mustache,haml,pug,njk,11ty.js`), will be copied to
-  the output, **unless** you set them manually with
+  `html,liquid,ejs,md,hbs,mustache,haml,pug,njk,11ty.js`), will be copied to the
+  output, **unless** you set them manually with
   `eleventyConfig.addPassthroughCopy`
+
+# TODO
+
+Add https://utteranc.es/
